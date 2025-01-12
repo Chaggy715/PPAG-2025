@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primario: #ffc107;
+    --secundario: #0097A7;
+}
+    html {  
+
+        font-size: 62.5%;
+      }
+      body {
+        font-size: 16px; /* 1rem = 10px */
+        font-family: 'Krub', sans-serif;
+      
+      }
+      
+      .titulo {
+          text-align: center;
+          font-size: 3.8rem;
+        }
+      
+      
+      .titulo span{
+        font-size: 2rem;
+      }

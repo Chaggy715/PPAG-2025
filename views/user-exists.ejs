@@ -1,5 +1,7 @@
 <%- include('partials/header', {tituloWeb: 'Usuario'}) %>
 <body>
+  <link rel="preload" href="css/user-exists.css" as="style"> <!-- precargar plantillas -->
+  <link rel="stylesheet" href="/css/user-exists.css?v=1"> <!-- El ?v=1 es para evitar caché -->
   <h1>¡Usuario ya registrado!</h1>
   <p><%= message %></p>
   <a href="<%= loginUrl %>">
