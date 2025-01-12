@@ -21,10 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Crear la conexión a la base de datos MySQL
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'Chavita',
-  password: 'Nano_01_15_2007',
-  database: 'ppag' // Nombre de tu base de datos
+  host: "localhost",
+  user: "Chavita",
+  password: "Nano_01_15_2007",
+  database: "ppag", // Nombre de tu base de datos
 });
 
 app.get("/", (req, res) => {
@@ -37,6 +37,14 @@ app.get("/i", (req, res) => {
 
 app.get("/r", (req, res) => {
   res.render("registro");
+});
+
+app.get("/h", (req, res) => {
+  res.render("home");
+});
+
+app.get("/ue", (req, res) => {
+  res.render("user-exists");
 });
 
 // Ruta para manejar la validación de login
@@ -58,6 +66,8 @@ app.post("/login", (req, res) => {
       // Redirigir según el tipo de usuario
       if (userType === "Admin") {
         res.redirect("/i");
+      } else if (userType === "User") {
+        res.redirect("/h");
       } else {
         res.send("No tienes un rol asignado.");
       }
@@ -75,8 +85,7 @@ app.post("/register", (req, res) => {
   const { username, password } = req.body;
 
   // Verificar si el email ya está registrado
-  const checkUserQuery =
-    "SELECT * FROM usuarios WHERE username = ?";
+  const checkUserQuery = "SELECT * FROM usuarios WHERE username = ?";
   connection.query(checkUserQuery, [username], (err, results) => {
     if (err) {
       console.error("Error al consultar la base de datos:", err);
@@ -84,16 +93,23 @@ app.post("/register", (req, res) => {
     }
 
     if (results.length > 0) {
-      // Si ya existe un usuario con ese email o nombre de usuario
-      return res.send("El usuario o correo electrónico ya está registrado");
+      // Renderiza una vista con el mensaje y el botón
+      return res.render("user-exists", {
+        message:
+          "El usuario o correo electrónico ya está registrado. Inicia sesión para continuar.",
+        loginUrl: "/", // Ruta de la página de inicio de sesión
+      });
     }
 
-    // Si el usuario no existe, insertarlo en la base de datos
+    // Definir el user_type predefinido
+    const userType = "User"; // Cambia 'regular' según el tipo predeterminado que desees
+
+    // Insertar el usuario con el user_type predefinido
     const insertQuery =
-      "INSERT INTO usuarios (username, password) VALUES (?, ?)";
+      "INSERT INTO usuarios (username, password, user_type) VALUES (?, ?, ?)";
     connection.query(
       insertQuery,
-      [username, email, password],
+      [username, password, userType],
       (err, results) => {
         if (err) {
           console.error("Error al insertar los datos:", err);
