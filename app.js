@@ -31,8 +31,8 @@ app.get("/", (req, res) => {
   res.render("login");
 });
 
-app.get("/i", (req, res) => {
-  res.render("index");
+app.get("/g", (req, res) => {
+  res.render("general");
 });
 
 app.get("/r", (req, res) => {
