@@ -28,7 +28,7 @@ const connection = mysql.createConnection({
 });
 
 app.get("/", (req, res) => {
-  res.render("login");
+  res.render("home");
 });
 
 app.get("/g", (req, res) => {
@@ -39,8 +39,8 @@ app.get("/r", (req, res) => {
   res.render("registro");
 });
 
-app.get("/h", (req, res) => {
-  res.render("home");
+app.get("/l", (req, res) => {
+  res.render("login");
 });
 
 app.get("/ue", (req, res) => {
@@ -67,7 +67,7 @@ app.post("/login", (req, res) => {
       if (userType === "Admin") {
         res.redirect("/i");
       } else if (userType === "User") {
-        res.redirect("/h");
+        res.redirect("/g");
       } else {
         res.send("No tienes un rol asignado.");
       }
@@ -117,7 +117,7 @@ app.post("/register", (req, res) => {
         }
 
         // Redirigir al usuario a la página de inicio de sesión o de éxito
-        res.redirect("/");
+        res.redirect("/l");
       }
     );
   });
