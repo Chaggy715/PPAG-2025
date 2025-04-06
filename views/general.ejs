@@ -1,21 +1,22 @@
 <%- include('partials/header', {tituloWeb: 'Psicopedagógico'}) %>
 <body>
+    
     <link rel="preload" href="css/general.css" as="style"> <!-- precargar plantillas -->
     <link rel="stylesheet" href="/css/general.css?v=1"> <!-- El ?v=1 es para evitar caché -->
     <h1>Psicopedagógico CAG</h1>
-    <p>Hola Wapos</p>
+    <div class="color">
+        <nav>
+        <a href="#">becas</a>
+        <a href="#">convenios</a>
+        <a href="#">contactos</a>
+    </nav>
+    </div>
     <!-- Botón de Login 
             <section class="start-button">
                 <button onclick="window.location.href='/login';">INICIAR</button>
             </section> -->
 <%- include('partials/footer') %>
 
-<div>
-    <nav>
-    <a href="#">becas</a>
-    <a href="#">convenios</a>
-    <a href="#"></a>
-</nav>
-</div>
+
 </body>
 </html>

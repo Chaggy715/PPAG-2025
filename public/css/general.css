@@ -29,4 +29,10 @@
       .titulo span{
         font-size: 2rem;
       }
-      
+      .color{
+        background-color: bisque;
+        height: 4rem;
+      }
+      .color a{
+color: black;
+      }
