@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "1234",
+  password: "",
   database: "ppag", // Nombre de tu base de datos
 });
 
