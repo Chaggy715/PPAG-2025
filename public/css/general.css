@@ -32,6 +32,7 @@
       .color{
         background-color: bisque;
         height: 4rem;
+
       }
       .color a{
 color: black;
@@ -51,8 +52,21 @@ float: right;
       }
       .imagen{
         background-image: url(../images/Gen33.webp);
-        background-position: center bottom;
+        background-position: center center;
         background-size: cover;
-        background-position-y: 0px;
+        background-position-y: -18rem;
         min-height: 50vh;
+      
       }
+      h1{
+        text-align: center;
+        text-transform: uppercase;
+        padding: 14rem;
+      }
+h2{
+  text-align: center;
+}
+.color2{
+  background-color: burlywood;
+  
+}
