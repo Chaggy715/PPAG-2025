@@ -2,10 +2,14 @@
 <body>
     <link rel="preload" href="css/home.css" as="style"> <!-- precargar plantillas -->
     <link rel="stylesheet" href="/css/home.css?v=1"> <!-- El ?v=1 es para evitar caché -->
-    <h1>Psicopedagógico CAG</h1>
-    <h2>Bienvenido</h2>
-    <button>Iniciar sesion</button><br>
-    <button>Registrarse</button>
+    <header class="header">
+        <div id="header-content" class="header-content container">
+            <h1>Psicopedagógico<br>CAG</h1>
+            <h2>Bienvenido</h2>
+            <button>Iniciar sesion</button><br>
+            <button>Registrarse</button>
+        </div>
+    </header>
 <%- include('partials/footer') %>
 </body>
 </html>
