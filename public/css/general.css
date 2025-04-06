@@ -35,4 +35,24 @@
       }
       .color a{
 color: black;
+transition: color 0.3s;
+padding: 1rem 2rem;
+display: block;
+position: relative;
+float: right;
+
+      }
+      .azul a{
+        
+      }
+      .azul a:hover{
+       color: peru;
+       
+      }
+      .imagen{
+        background-image: url(../images/Gen33.webp);
+        background-position: center bottom;
+        background-size: cover;
+        background-position-y: 0px;
+        min-height: 50vh;
       }
