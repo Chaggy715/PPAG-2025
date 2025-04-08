@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,27 +7,105 @@
     text-decoration: none;
     list-style: none;
 }
-
-:root {
-    --primario: #ffc107;
-    --secundario: #0097A7;
+html { 
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
-    html {  
+body {
+  background-color: #007b00;
+  font-size: 16px; /* 1rem = 10px */
+  font-family: 'Krub', sans-serif;
+}
 
-        font-size: 62.5%;
-      }
-      body {
-        font-size: 16px; /* 1rem = 10px */
-        font-family: 'Krub', sans-serif;
-      
-      }
-      
-      .titulo {
-          text-align: center;
-          font-size: 3.8rem;
-        }
-      
-      
-      .titulo span{
-        font-size: 2rem;
-      }
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header{
+  min-height: 90.5vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  text-align: center;
+}
+
+form{
+  text-align: center;
+  background-color: white;
+  border-radius: 25px;
+  width: 70rem;
+  height: 50rem;
+  padding: 5rem;
+}
+
+.img{
+  width: 0;
+  align-items: center;
+  margin-top: -75rem;
+  margin-left: 3rem;
+  margin-right: -3rem;
+}
+
+img{
+  width: 30rem;
+}
+
+.header-content h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 12rem;
+  color: bisque;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.header-content h2{
+  font-family: "Oswald", sans-serif;
+  font-size: 17rem;
+  color: bisque;
+  margin-top: -90px;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+
+label{
+  margin-left: -10rem;
+  align-self: flex-start;
+}
+
+a{
+  color: black;
+}
+
+button{
+  font-weight: 600;
+  width: 40%;
+    padding: 20px;
+    margin-top: 25px;
+    background-color: bisque;
+    border: none;
+    border-radius: 50px;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: peru;
+}
+
+@media (max-width: 991px) {
+  img{
+    width: 20rem;
+  }
+
+  .img{
+    margin-top: -80rem;
+    margin-left: 2rem;
+    margin-right: -2rem;
+  }
+
+  
+}
