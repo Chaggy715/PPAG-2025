@@ -85,7 +85,7 @@ button:hover {
 @media (max-width: 991px){
 
   .header{
-    min-height: 100vh;
+    min-height: 93vh;
   }
 
   img{
@@ -93,7 +93,7 @@ button:hover {
   }
 
   .img{
-    margin-top: -74rem;
+    margin-top: -60rem;
     margin-left: 1.5rem;
     margin-right: -1.5rem;
   }
