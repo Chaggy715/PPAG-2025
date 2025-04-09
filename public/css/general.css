@@ -30,10 +30,12 @@
         font-size: 2rem;
       }
       .color{
+        max-width: 120rem;
         background-color: bisque;
         height: 4rem;
-
+margin: 0 auto;
       }
+
       .color a{
 color: black;
 transition: color 0.3s;
@@ -42,6 +44,14 @@ display: block;
 position: relative;
 float: right;
 
+      }
+      @media (min-width: 468px) {
+
+      .color{
+        flex-direction: row;
+        justify-content: space-between;
+      
+      }
       }
       .azul a{
         
@@ -85,5 +95,5 @@ button{
 }
 .imagen2 {
   background-image: url(../images/CAG-Logo.webp);
-  
+height: 240px;
 }
