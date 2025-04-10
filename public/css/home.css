@@ -32,11 +32,23 @@ body {
   text-align: center;
 }
 
+.img{
+  width: 0;
+  align-items: center;
+  margin-top: -75rem;
+  margin-left: 3rem;
+  margin-right: -3rem;
+}
+
+img{
+  width: 30rem;
+}
+
 .header-content h1 {
   font-family: "Oswald", sans-serif;
   font-size: 12rem;
-  color: rgb(218, 188, 153);
-  margin-top: -40px;
+  color: bisque;
+  margin-top: 1rem;
   text-transform: uppercase;
 }
 
@@ -49,13 +61,16 @@ body {
   margin-bottom: 80px;
 }
 
+a{
+  color: black;
+}
+
 button{
   font-weight: 600;
   width: 45%;
     padding: 25px;
     margin-top: 25px;
     background-color: bisque;
-    color: black;
     border: none;
     border-radius: 50px;
     font-size: 4rem;
@@ -65,4 +80,36 @@ button{
 
 button:hover {
   background-color: peru;
+}
+
+@media (max-width: 991px){
+
+  .header{
+    min-height: 93vh;
+  }
+
+  img{
+    width: 20rem;
+  }
+
+  .img{
+    margin-top: -60rem;
+    margin-left: 1.5rem;
+    margin-right: -1.5rem;
+  }
+
+  .header-content h1{
+    font-size: 4.6rem;
+  }
+
+  .header-content h2{
+    font-size: 6.6rem;
+    margin-top: -4rem;
+  }
+
+  button{
+    width: 75%;
+    padding: 20px;
+    font-size: 2.5rem;
+  }
 }

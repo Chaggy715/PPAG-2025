@@ -2,12 +2,15 @@
 <body>
     <link rel="preload" href="css/home.css" as="style"> <!-- precargar plantillas -->
     <link rel="stylesheet" href="/css/home.css?v=1"> <!-- El ?v=1 es para evitar caché -->
-    <header class="header">
+    <header class="header"><!-- header-->
+        <div class="img">
+            <img src="images/CAG-Logo.webp?v=1" alt="">
+        </div>
         <div id="header-content" class="header-content container">
             <h1>Psicopedagógico</h1>
             <h2>CAG</h2>
-            <button>Iniciar sesion</button><br>
-            <button>Registrarse</button>
+            <button><a href="/l">Iniciar sesion</a></button><br>
+            <button><a href="/r">Registrarse</a></button>
         </div>
     </header>
 <%- include('partials/footer') %>
