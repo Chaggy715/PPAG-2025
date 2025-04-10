@@ -136,19 +136,21 @@ button:hover {
   }
 
   .botones{
-    margin-top: -2.5rem;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    margin-top: -3rem;
   }
 
   button{
     align-self: flex-start;
-    width: 175%;
+    width: 28.5rem;
     padding: 20px;
     font-size: 18px;
-    margin-left: -4rem;
   }
 
   form{
-    padding: 3.5rem 4rem;
+    padding: 2rem 2.5rem;
     width: 34rem;
     height: 45rem;
   }
