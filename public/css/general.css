@@ -66,7 +66,7 @@ float: right;
         background-image: url(../images/Gen33.webp);
         background-position: center center;
         background-size: cover;
-        background-position-y: -18rem;
+        background-position-y: -18rem;  
         min-height: 50vh;
         
       
@@ -83,7 +83,10 @@ h2{
 }
 .color2{
   background-color: burlywood;
-  
+ flex-direction: column;
+display: flex;
+align-items: center;
+padding: 1rem;
 }
 .fondonegrito{
   position: absolute;
@@ -102,7 +105,7 @@ button{
   /* contorno */
   margin-top: 1rem;
   /* que tan grande esta el contorno */
-  font-size: 20px;
+  font-size: 15px;
   /* tamaño de la fuente */
   text-decoration: none;
   /* quitar la linea */
@@ -110,15 +113,27 @@ button{
   /* para hacerlo en negritas */
   font-weight: bold;
   /* tipo de fuente */
-  border-radius: .3rem;
+  border-radius: 10rem;
   /* para el contorno del boton*/
-  width: 70%;
+  width: 15%;
   /* para que el boton en telefonos moviles sea mas grande */
   text-align: center;
   /* alinear el texto en el medio */
+  border: none;
 }
 
 h2{
   font-family: 'Oswald';
 
+}
+.imagen3{
+  background-image: url(../images/tabla.png);
+  background-position: center;
+background-size: 70%;
+min-height: 100vh;
+background-repeat: no-repeat;
+
+}
+.imagen3{
+ background-color: #d9d9d9;
 }
