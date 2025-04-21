@@ -35,6 +35,10 @@ app.get("/g", (req, res) => {
   res.render("general");
 });
 
+app.get("/c", (req, res) => {
+  res.render("contactos");
+});
+
 app.get("/r", (req, res) => {
   res.render("registro");
 });
