@@ -127,7 +127,7 @@ h2{
 
 }
 .imagen3{
-  background-image: url(../images/tabla.png);
+  background-image: url(../images/tabla-1.webp);
   background-position: center;
 background-size: 70%;
 min-height: 100vh;
@@ -136,4 +136,7 @@ background-repeat: no-repeat;
 }
 .imagen3{
  background-color: #d9d9d9;
+}
+h2{
+  padding: 40px;
 }
