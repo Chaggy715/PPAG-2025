@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,27 +7,111 @@
     text-decoration: none;
     list-style: none;
 }
-
-:root {
-    --primario: #ffc107;
-    --secundario: #0097A7;
+html { 
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
-    html {  
+body {
+  background-color: #007b00;
+  font-size: 16px; /* 1rem = 10px */
+  font-family: 'Krub', sans-serif;
+}
 
-        font-size: 62.5%;
-      }
-      body {
-        font-size: 16px; /* 1rem = 10px */
-        font-family: 'Krub', sans-serif;
-      
-      }
-      
-      .titulo {
-          text-align: center;
-          font-size: 3.8rem;
-        }
-      
-      
-      .titulo span{
-        font-size: 2rem;
-      }
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header{
+  min-height: 90.5vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  text-align: center;
+}
+
+form{
+  text-align: center;
+  background-color: white;
+  border-radius: 25px;
+  width: 70rem;
+  height: 50rem;
+  padding: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img{
+  width: 0;
+  align-items: center;
+  margin-top: -75rem;
+  margin-left: 3rem;
+  margin-right: -3rem;
+}
+
+img{
+  width: 30rem;
+}
+
+.header-content h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 12rem;
+  color: bisque;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+label{
+  border-color: bisque;
+  border-radius: 5px;
+  margin-left: -10rem;
+  align-self: flex-start;
+  margin: 0;
+  font-size: 3rem;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  font-size: 2.5rem;
+  border: solid#007b00;
+  border-radius: 25px;
+}
+
+a{
+  color: black;
+}
+
+.btn{
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+}
+
+.btn button{
+  align-self: unset;
+  margin-left: 0;
+  white-space: nowrap;
+}
+
+button{
+  color: black;
+  font-weight: 600;
+  width: 28rem;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    background-color: bisque;
+    border: none;
+    border-radius: 50px;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+button:hover {
+  background-color: peru;
+}
