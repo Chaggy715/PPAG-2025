@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+    html {  
+
+        font-size: 62.5%;
+      }
+      body {
+        font-size: 16px; /* 1rem = 10px */
+        font-family: 'Krub', sans-serif;
+      
+      }
+      .color{
+        max-width: 100%;
+        background-color: bisque;
+        height: 4rem;
+margin: 0 auto;
+      }
+
+      .color a{
+color: black;
+transition: color 0.3s;
+padding: 1rem 2rem;
+display: block;
+position: relative;
+float: right;
+
+      }
+      @media (min-width: 468px) {
+
+      .color{
+        flex-direction: row;
+        justify-content: space-between;
+      
+      }
+      }
+      .azul a{
+        
+      }
+      .azul a:hover{
+       color: peru;
+       
+      }
+      .imagen{
+        background-image: url(../images/Gen33.webp);
+        background-position: center center;
+        background-size: cover;
+        background-position-y: -18rem;
+        min-height: 50vh;
+        
+      
+      }
+      h1{
+        text-align: center;
+        text-transform: uppercase;
+        padding: 3rem;
+        color: burlywood;
+    font-size: 100px;
+      }
+h2{
+  text-align: center;
+}
+.color2{
+  background-color: burlywood;
+  
+}
+.fondonegrito{
+  position: absolute;
+background-color: rgba(0,0,0,.6 );
+background-color: rgb(0 0 0 / 85%);
+width: 100%;
+height: 50%;
+}
+button{
+  
+  background-color: blanchedalmond;
+  /* para el fondo del boton */
+  color: var(--blanco);
+  /* color del texto */
+  padding: 1rem 3rem;
+  /* contorno */
+  margin-top: 1rem;
+  /* que tan grande esta el contorno */
+  font-size: 20px;
+  /* tamaño de la fuente */
+  text-decoration: none;
+  /* quitar la linea */
+  text-transform: uppercase;
+  /* para hacerlo en negritas */
+  font-weight: bold;
+  /* tipo de fuente */
+  border-radius: .3rem;
+  /* para el contorno del boton*/
+  width: 70%;
+  /* para que el boton en telefonos moviles sea mas grande */
+  text-align: center;
+  /* alinear el texto en el medio */
+}
+
+h2{
+  font-family: 'Oswald';
+
+}
