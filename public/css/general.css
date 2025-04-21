@@ -30,7 +30,7 @@
         font-size: 2rem;
       }
       .color{
-        max-width: 120rem;
+        max-width: 100%;
         background-color: bisque;
         height: 4rem;
 margin: 0 auto;
