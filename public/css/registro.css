@@ -115,3 +115,55 @@ button{
 button:hover {
   background-color: peru;
 }
+
+@media (max-width: 991px) {
+  .header{
+    min-height: 93vh;
+  }
+
+  img{
+    width: 20rem;
+  }
+
+  .img{
+    margin-top: -60rem;
+    margin-left: 1.5rem;
+    margin-right: -1.5rem;
+  }
+
+  .header-content h1{
+    font-size: 5rem;
+  }
+
+  .btn{
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    margin-top: -3rem;
+  }
+
+  button{
+    align-self: flex-start;
+    width: 28.5rem;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  form{
+    padding: 2rem 2.5rem;
+    width: 34rem;
+    height: 45rem;
+  }
+
+  label{
+    margin-left: 0;
+    font-size: 2rem;
+    margin-bottom: -3px;
+  }
+
+  input{
+    width: 100%;
+    padding: 10px;
+  }
+
+}
