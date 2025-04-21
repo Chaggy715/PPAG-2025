@@ -2,9 +2,15 @@
 <body>
     <link rel="preload" href="css/registro.css" as="style"> <!-- precargar plantillas -->
     <link rel="stylesheet" href="/css/registro.css?v=1"> <!-- El ?v=1 es para evitar caché -->
-    <div class="container">
-   <div class="">
-    <h1>Registro</h1>
+    <header class="header">
+        <div class="img">
+            <img src="images/CAG-Logo.webp?v=1" alt="">
+        </div>
+        <div id="header-content" class="header-content container">
+            <h1>Registro</h1>
+            <div class="form">
+
+            </div>
     <!-- Mostrar mensaje de error si hay uno -->
         <% if (typeof errorMessage !== 'undefined') { %>
             <div style="color: red; text-align: center;">
@@ -21,6 +27,8 @@
 
         <button type="submit">Continuar</button>
     </form>
+        </div>
+    </header>
 <%- include('partials/footer') %>
 </body>
 </html>
