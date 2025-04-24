@@ -146,14 +146,25 @@ h2{
 .textos2{
 font-size: 30px;
 padding:50px 50px 50px 50px;
-background-color: aqua;
+
 width: 50%;
 }
 .textos3{
-background-color: blueviolet;
+background-color: ;
 width: 50%;
 }
 .textos4{
-  background-color: blueviolet;
+  background-color: ;
   width: 50%;
+}
+h3{
+  color:rgb(179, 135, 58);
+  text-shadow: 2px 4px 5px rgb(175, 175, 175);
+}
+.d{
+  font-size: 30px;
+  padding: 400px 20px 20px 20px;
+}
+.m{
+  width: 100%;
 }
