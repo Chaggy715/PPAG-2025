@@ -31,6 +31,31 @@ body {
   z-index: 1000;
 }
 .logo img{
-  width: 11rem;
-  
+  width: 14rem;
+  padding: 6px 0 0 0;
+  margin-left: -2rem;
+}
+.menu .navbar ul li{
+  position: relative;
+  float: left;
+}
+.menu .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+.menu .navbar ul li a:hover {
+  color: peru;
+}
+#menu{
+  display: none;
+}
+.menu-icono {
+  width: 25px;
+}
+.menu label {
+  cursor: pointer;
+  display: none;
 }
