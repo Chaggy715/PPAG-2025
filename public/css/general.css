@@ -174,19 +174,20 @@ h2{
 .textos2{
 font-size: 30px;
 padding:50px 50px 50px 50px;
-
+background-color: rgb(172, 202, 250);
 width: 50%;
 }
 .textos3{
-background-color: ;
+background-color: rgb(172, 202, 250);
 width: 50%;
+
 }
 .textos4{
-  background-color: ;
+  background-color: rgb(172, 202, 250);
   width: 50%;
 }
 h3{
-  color:rgb(179, 135, 58);
+  color:rgb(0, 0, 0);
   text-shadow: 2px 4px 5px rgb(175, 175, 175);
 }
 .d{
@@ -196,4 +197,9 @@ h3{
 .m{
   width: 100%;
   font-size: 6rem;
+}
+.j{
+  font-size: 30px;
+  padding:270px 20px 270px 20px;
+  
 }
