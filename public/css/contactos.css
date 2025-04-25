@@ -75,9 +75,13 @@ body {
   cursor: pointer;
   display: none;
 }
+#N{
+  margin-top: -12.5rem;
+  margin-bottom: 12.5rem;
+}
 .nosotros {
-  padding: 60px;
-  background-color: #e1e2e6;
+  padding: 4.5rem 6rem 5rem 6rem;
+  background-color: #E8F1D5;
   position: relative;
 }
 .nosotros-content {
@@ -90,8 +94,100 @@ body {
   padding: 0 250px;
   margin-bottom: 4rem;
 }
-.nosotros-content h4{
+.nosotros-content h3{
   font-size: 3rem;
   color: #414247;
+  margin-bottom: 4rem;
+  line-height: 4rem;
+}
+.pn{
+  font-weight: bold;
+  font-size: 2rem;
+  color: #323337;
+  line-height: 2.5rem;
+}
+#I{
+  margin-top: -12.5rem;
+  margin-bottom: 12.5rem;
+}
+.integrantes{
+  padding: 4.5rem 6rem 2rem 6rem;
+  background-color: rgb(221, 161, 101);
+  position: relative;
+  text-align: center;
+}
+.integrantes h2{
+  font-size: 6rem;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+.integrantes-content{
+  width: 1600px;
+  display: flex;
+}
+.integrantes-content img{
+  width: 35rem;
+  border-radius: 25px;
+}
+.info-1{
+  width: 50%;
+  padding: 2rem 5rem;
+}
+.integrantes-content h3{
+  padding: 1rem;
+  font-size: 4rem;
+}
+.integrantes-content h4{
+  padding-bottom: 1rem;
+  font-size: 3rem;
+}
+.integrantes-content p{
+  padding: 1rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+#M{
+  margin-top: -12.5rem;
+  margin-bottom: 12.5rem;
+}
+.mision{
+  padding: 4.5rem 6rem 4rem 6rem;
+  background-color: #E8F1D5;
+  position: relative;
+  text-align: center;
+}
+.txt{
+  margin: auto;
+  width: 130rem;
+}
+.txt h2{
+  font-size: 6rem;
   margin-bottom: 3rem;
+}
+.txt p{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.mision-content{
+  width: 160rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.info{
+  text-align: center;
+  width: 31%;
+  margin-top: 4rem;
+}
+.info img{
+  width: 30rem;
+  border-radius: 25px;
+}
+.info h3{
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.info p{
+  font-size: 2.5rem;
 }
