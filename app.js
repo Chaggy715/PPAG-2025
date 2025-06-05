@@ -69,7 +69,7 @@ app.post("/login", (req, res) => {
 
       // Redirigir según el tipo de usuario
       if (userType === "Admin") {
-        res.redirect("/i");
+        res.redirect("/g");
       } else if (userType === "User") {
         res.redirect("/g");
       } else {
@@ -101,7 +101,7 @@ app.post("/register", (req, res) => {
       return res.render("user-exists", {
         message:
           "El usuario o correo electrónico ya está registrado. Inicia sesión para continuar.",
-        loginUrl: "/", // Ruta de la página de inicio de sesión
+        loginUrl: "/l", // Ruta de la página de inicio de sesión
       });
     }
 
