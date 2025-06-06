@@ -2,11 +2,31 @@
 <body>
   <link rel="preload" href="css/user-exists.css" as="style"> <!-- precargar plantillas -->
   <link rel="stylesheet" href="/css/user-exists.css?v=1"> <!-- El ?v=1 es para evitar caché -->
-  <h1>¡Usuario ya registrado!</h1>
-  <p><%= message %></p>
-  <a href="<%= loginUrl %>">
-    <button>Iniciar sesión</button>
-  </a>
+  <header class="header">
+
+    <div class="img">
+        <img src="images/CAG-Logo.webp?v=1" alt="">
+    </div>
+
+    <div id="header-content" class="header-content container">
+
+      <h1>¡Usuario ya registrado!</h1>
+
+      <div class="info">
+
+
+          <p><%= message %></p>
+          <div class="btn">
+            <a href="<%= loginUrl %>">
+              <button>Iniciar sesión</button>
+            </a>
+          </div>
+
+      </div>
+
+    </div>
+
+  </header>
   <%- include('partials/footer') %>
 </body>
 </html>
