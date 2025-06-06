@@ -167,6 +167,7 @@ background-repeat: no-repeat;
 }
 h2{
   padding: 40px;
+  
 }
 .textos{
   display: flex;
@@ -191,7 +192,7 @@ h3{
   color:rgb(0, 0, 0);
   text-shadow: 2px 4px 5px rgb(152, 161, 176);
 }
-.d{
+.s{
   font-size: 30px;
   padding: 400px 20px 20px 20px;
 }
@@ -209,8 +210,71 @@ h3{
 .tamaÑo{
   font-size: 70px;
   color: darkgreen;
+  padding: 100px;
 }
 .d{
   padding: 50px 50px 50px 50px;
   font-size: 40px;
 }
+.image{
+  background-image: url(../images/1.png);
+  background-position: center;
+background-size: 70%;
+min-height: 100vh;
+background-repeat: no-repeat;
+
+}
+.image2{
+  background-image: url(../images/10.png);
+  background-position: center;
+background-size: 70%;
+min-height: 100vh;
+background-repeat: no-repeat;
+
+}
+.a{
+  padding: 200px 0px 0px 200px;
+}
+.p{
+  padding: 100px 0px 0px 100px;
+}
+.o{
+  padding: 100px 0px 0px 215px ;
+}
+.i{
+  padding: 400px 0px 0px 0px;
+}
+.u{
+  padding: 0px 0px 0px 200px;
+}
+.y{
+  padding: 200px 0px 0px 0px;
+}
+.t{
+  padding: 150px 0px 0px 0px;
+}
+.r{
+  padding: 150px 50px 50px 50px;
+  font-size: 100px;
+}
+p{
+  padding: 20px 50px 50px 100px;
+  
+}
+.w{padding: 50px 50px 0px 50px;}
+
+@media (max-width: 480px) {
+  h2{
+    font-size: 30 px;
+    padding: 50px 500px 50px 50px;
+  }
+  h3{
+    font-size: 20px
+  }
+  p{
+font-size: 20px;
+  }
+  img{
+    
+  } 
+}     
