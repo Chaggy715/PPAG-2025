@@ -232,49 +232,314 @@ min-height: 100vh;
 background-repeat: no-repeat;
 
 }
-.a{
-  padding: 200px 0px 0px 200px;
-}
-.p{
-  padding: 100px 0px 0px 100px;
-}
-.o{
-  padding: 100px 0px 0px 215px ;
-}
-.i{
-  padding: 400px 0px 0px 0px;
-}
-.u{
-  padding: 0px 0px 0px 200px;
-}
-.y{
-  padding: 200px 0px 0px 0px;
-}
-.t{
-  padding: 150px 0px 0px 0px;
-}
-.r{
-  padding: 150px 50px 50px 50px;
-  font-size: 100px;
-}
-p{
-  padding: 20px 50px 50px 100px;
-  
-}
-.w{padding: 50px 50px 0px 50px;}
 
-@media (max-width: 480px) {
+/*.header{
+  background-color: rgb(209, 209, 209);
+  background-image: url(../images/Gen33.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80rem;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: -8rem;
+}*/
+.menu{
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: bisque;
+  padding: 1rem 5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.logo img{
+  width: 14rem;
+  padding: 6px 0 0 0;
+  margin-left: -2rem;
+}
+.navbar{
+  margin-right: -2rem;
+}
+.menu .navbar ul li{
+  position: relative;
+  float: left;
+}
+.menu .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  font-weight: 700;
+}
+.menu .navbar ul li a:hover {
+  color: peru;
+}
+#menu{
+  display: none;
+}
+.menu-icono {
+  width: 25px;
+}
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+#N{
+  margin-top: -12.5rem;
+  margin-bottom: 12.5rem;
+}
+.nosotros {
+  padding: 4.5rem 6rem 5rem 6rem;
+  background-color: #E8F1D5;
+  position: relative;
+}
+.nosotros-content {
+  text-align: center;
+}
+.nosotros-content h2 {
+  color: #323337;
+  text-transform: uppercase;
+  padding: 0 250px;
+  margin-bottom: 4rem;
+}
+.nosotros-content h3{
+  font-size: 3rem;
+  color: #414247;
+  margin-bottom: 4rem;
+  line-height: 4rem;
+}
+.pn{
+  font-weight: bold;
+  font-size: 2rem;
+  color: #323337;
+  line-height: 2.5rem;
+}
+#I{
+  margin-top: -12.5rem;
+  margin-bottom: 12.5rem;
+}
+.integrantes{
+  padding: 4.5rem 6rem 2rem 6rem;
+  background-color: rgb(221, 161, 101);
+  position: relative;
+  text-align: center;
+}
+.integrantes h2{
+  margin-bottom: 4rem;
+  width: 100%;
+}
+.integrantes-content{
+  width: 1600px;
+  display: flex;
+}
+.integrantes-content img{
+  width: 35rem;
+  border-radius: 25px;
+}
+.info-1{
+  width: 50%;
+  padding: 2rem 5rem;
+}
+.integrantes-content h3{
+  padding: 1rem;
+  font-size: 4rem;
+}
+.integrantes-content h4{
+  padding-bottom: 1rem;
+  font-size: 3rem;
+}
+.integrantes-content p{
+  padding: 1rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+#M{
+  margin-top: -12.5rem;
+  margin-bottom: 12.5rem;
+}
+.mision{
+  padding: 4.5rem 6rem 4rem 6rem;
+  background-color: #E8F1D5;
+  position: relative;
+  text-align: center;
+}
+.txt{
+  margin: auto;
+  width: 130rem;
+}
+.txt h2{
+  margin-bottom: 3rem;
+}
+.txt p{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.mision-content{
+  width: 160rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.info{
+  text-align: center;
+  width: 31%;
+  margin-top: 4rem;
+}
+.info img{
+  width: 30rem;
+  border-radius: 25px;
+}
+.info h3{
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.info p{
+  font-size: 2.5rem;
+}
+.alexa{
+  font-size: 40px;
+}
+
+@media(max-width:991px){
+  .menu{
+    padding: 30px;
+    height: 2%;
+  }
+
+  .menu label{
+    display: initial;
+    margin-top: 5px;
+  }
+
+  .menu .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2d2c32;
+    display: none;
+  }
+
+  .menu .navbar ul li{
+    width: 100%;
+    background-color: rgb(219, 187, 148);
+    border: 1px solid;
+    border-color: rgb(241, 192, 127);
+  }
+
+  #menu:checked ~ .navbar{
+    display: initial;
+  }
+
+  .logo img{
+    width: 25%;
+  }
+
+  .header{
+    background-size: 100%;
+    min-height: 50vh;
+    width: auto;
+  }
+
   h2{
-    font-size: 30 px;
-    padding: 50px 500px 50px 50px;
+    font-size: 3.2rem;
   }
-  h3{
-    font-size: 20px
+
+  .nosotros-content h2{
+    padding: 0;
+    font-size: 3.3rem;
   }
-  p{
-font-size: 20px;
+
+  .nosotros-content h3{
+    font-size: 2.3rem;
+    line-height: 2.5rem;
   }
-  img{
-    
-  } 
-}     
+
+  .integrantes-content{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: -1rem;
+  }
+
+  .integrantes-content img{
+    width: 100%;
+  }
+
+  .integrantes-content h3{
+    font-size: 3rem;
+  }
+
+  .integrantes-content h4{
+    font-size: 2rem;
+  }
+
+  .integrantes-content p{
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .info-1{
+    width: 100%;
+    padding: 0;
+    margin-bottom: 3.5rem;
+  }
+
+  .txt{
+    width: 100%;
+    margin-bottom: -5rem;
+  }
+
+  .txt p{
+    font-size: 2rem;
+  }
+
+  .mision-content{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .info{
+    width: 100%;
+
+  }
+
+  .info img{
+    width: 100%;
+    margin-bottom: -3rem;
+  }
+
+  .info h3{
+    font-size: 2.5rem;
+  }
+
+  .info p{
+    font-size: 2rem;
+    margin-bottom: -2rem;
+  }
+}
+
+
+h2{
+  font-size: 50px
+}
+h1{
+  font-size: 35px
+}
+.alexa{
+  font-size: 20px;
+}
+button{
+  width: auto;
+}
