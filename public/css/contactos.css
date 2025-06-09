@@ -126,10 +126,6 @@ h2{
   width: 1600px;
   display: flex;
 }
-.integrantes-content img{
-  width: 35rem;
-  border-radius: 25px;
-}
 .info-1{
   width: 50%;
   padding: 2rem 5rem;
