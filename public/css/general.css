@@ -150,6 +150,8 @@ button{
   text-align: center;
   /* alinear el texto en el medio */
   border: none;
+
+  transition: background-color 0.3s;
 }
 
 h2{
@@ -544,4 +546,10 @@ button{
 }
 }
 
-
+A{
+  color: #2d2c32;
+  
+}
+button:hover {
+  background-color: peru;
+}
