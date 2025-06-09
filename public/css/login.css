@@ -44,6 +44,20 @@ form{
   align-items: center;
 }
 
+.error{
+  background-color: black;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  margin-top: -62px;
+  width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: red;
+}
+
 .img{
   width: 0;
   align-items: center;
@@ -142,6 +156,10 @@ button:hover {
     margin-right: -1.5rem;
   }
 
+  .header-content{
+    margin-top: 11rem;
+  }
+
   .header-content h1{
     font-size: 5rem;
   }
@@ -172,6 +190,12 @@ button:hover {
     padding: 2rem 2.5rem;
     width: 34rem;
     height: 46rem;
+  }
+
+  .error{
+    margin-top: -2.5rem;
+    margin-bottom: 1rem;
+    width: 30rem;
   }
 
   label{

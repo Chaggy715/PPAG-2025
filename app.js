@@ -51,6 +51,10 @@ app.get("/ue", (req, res) => {
   res.render("user-exists");
 });
 
+app.get("/a", (req, res) => {
+  res.render("admin");
+});
+
 // Ruta para manejar la validación de login
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
@@ -69,7 +73,7 @@ app.post("/login", (req, res) => {
 
       // Redirigir según el tipo de usuario
       if (userType === "Admin") {
-        res.redirect("/g");
+        res.redirect("/a");
       } else if (userType === "User") {
         res.redirect("/g");
       } else {
