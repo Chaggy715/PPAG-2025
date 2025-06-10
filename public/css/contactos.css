@@ -148,6 +148,22 @@ li:hover {
   font-size: 2.5rem;
   line-height: 3.5rem;
 }
+
+/*los siguientes de lista son para no usar br en html y lo puedan editar facilmente*/
+.lista {
+  white-space: pre-wrap;
+}
+.lista::before {
+  content: "";
+}
+.lista {
+  display: block;
+}
+.lista span {
+  display: block;
+  margin-bottom: 8px;
+}
+
 #M{
   margin-top: -12.5rem;
   margin-bottom: 12.5rem;

@@ -50,15 +50,9 @@ h2{
   margin: 0 auto;
 }
 .header{
-  background-color: rgb(209, 209, 209);
-  background-image: url(../images/Logo-Psico.webp?v=1);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 80rem;
-  min-height: 75vh;
+  min-height: 0vh;
   display: flex;
   align-items: center;
-  margin-bottom: -8rem;
 }
 .menu{
   max-width: 100%;
