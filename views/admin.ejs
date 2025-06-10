@@ -479,6 +479,35 @@
             </form>
           </div>
         </section>
+
+
+
+        <!-- Esta parte es para el link, ya la puse yo entonces tu sigue arriba con lo que falte :)-->
+        <section>
+          <div class="container">
+            <h1>Link para el formulario:</h1>
+<form onsubmit="actualizar(this, event)">
+  <input type="hidden" name="clave" value="C_l1">
+
+  <input
+    type="text"
+    name="valor"
+    placeholder="Aquí va el nuevo link"
+    value="<%= contenido.C_l1 %>"
+    oninput="mostrarBotonLink(this, 'boton-l1')"
+  >
+
+  <button type="submit" id="boton-l1" style="display: none;">Actualizar link</button>
+
+  <span class="mensaje" style="display: none;">
+    <span class="texto-mensaje"></span>
+    <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">✖</button>
+  </span>
+</form>
+
+          </div>
+        </section>
+
         <%- include('partials/footer') %>
     </body>
     <script>
@@ -568,6 +597,10 @@ function mostrarBoton(inputFile, idBoton) {
   } else {
     boton.style.display = 'none';
   }
+}
+function mostrarBotonLink(input, idBoton) {
+  const boton = document.getElementById(idBoton);
+  boton.style.display = input.value.trim() !== '' ? 'inline-block' : 'none';
 }
 </script>
     </html>
