@@ -50,7 +50,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: bisque;
+        background-color: #00368c;
         padding: 1rem 5rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 1000;
@@ -76,7 +76,7 @@
         font-weight: 700;
       }
       .menu .navbar ul li a:hover {
-        color: peru;
+        color: #00368c;
       }
       #menu{
         display: none;
