@@ -64,20 +64,65 @@
     <main class="mision">
         <div id="M"></div>
         <div class="txt">
-            <h2>¿Qué hacemos en psicopedagógico?</h2>
-            <p>A veces se tiene la idea de que uno acude "al psicopedagógico"
-                cuando te mandan llamar o tienes algún problema emocional grave.
-                La realidad es muy distinta, aquí te dejamos algunas de las
-                opciones que podemos ofrecerte para tu crecimiento personal.</p>
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p2">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t2 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+            
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p2">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p3 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
             </div>
-        <div class="mision-content container">
+
+        <div class="mision-content container">         
             <div class="info">
-                <img src="images/1.png?v=1" alt="Imágen">
-                <h3>Acompañamiento Emocional</h3>
-                <p>Escuchamos y aconsejamos a todos aquellos que se acercan a
-                    nosotros ya sea por dudas en su toma de decisiones,
-                    conflictos internos y hasta alegrías por sus logros.
-                    La idea es verte crecer.</p>
+                <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i1">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i1 %>" alt="Imagen actual" class="preview-img" id="preview-C_i1">
+      </div>
+    
+      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i1'); mostrarBoton(this, 'boton-img')">
+    
+      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+                
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t3">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t3 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p4">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p4 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
             </div>
             <div class="info">
                 <img src="images/2.png?v=1" alt="Imágen">
@@ -147,6 +192,7 @@
         window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('textarea').forEach(ajustarAltura);
   });
+
 async function actualizar(formulario, event) {
   event.preventDefault();
 
@@ -174,15 +220,61 @@ async function actualizar(formulario, event) {
     mensaje.style.display = 'inline-flex';
   }
 }
+
 function cerrarMensaje(boton) {
   const mensaje = boton.parentElement;
   const textoMensaje = mensaje.querySelector('.texto-mensaje');
   textoMensaje.textContent = '';
   mensaje.style.display = 'none';
 }
+
 function ajustarAltura(textarea) {
     textarea.style.height = 'auto'; // Reinicia altura
     textarea.style.height = textarea.scrollHeight + 'px'; // Ajusta a contenido
   }
+
+function mostrarPreview(input, idPreview) {
+    const file = input.files[0];
+    const preview = document.getElementById(idPreview);
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = e => {
+        preview.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+async function subirImagen(formulario, event) {
+  event.preventDefault();
+
+  const formData = new FormData(formulario);
+  const mensaje = formulario.querySelector('.mensaje');
+  const textoMensaje = mensaje.querySelector('.texto-mensaje');
+
+  try {
+    const respuesta = await fetch('/admin/subir-imagen', {
+      method: 'POST',
+      body: formData
+    });
+
+    const texto = await respuesta.text();
+
+    textoMensaje.textContent = texto;
+    mensaje.style.color = respuesta.ok ? 'green' : 'red';
+    mensaje.style.display = 'inline-flex';
+  } catch (err) {
+    textoMensaje.textContent = 'Error al subir imagen';
+    mensaje.style.color = 'red';
+    mensaje.style.display = 'inline-flex';
+  }
+}
+function mostrarBoton(inputFile, idBoton) {
+  const boton = document.getElementById(idBoton);
+  if (inputFile.files && inputFile.files.length > 0) {
+    boton.style.display = 'inline-block';
+  } else {
+    boton.style.display = 'none';
+  }
+}
 </script>
     </html>

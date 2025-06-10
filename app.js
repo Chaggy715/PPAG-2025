@@ -1,4 +1,5 @@
 import express from "express";
+import multer from 'multer';
 import path from "path";
 import { fileURLToPath } from 'url';
 
@@ -45,6 +46,31 @@ app.post('/admin/actualizar', async (req, res) => {
   } catch (error) {
     console.error('Error al actualizar contenido:', error);
     res.status(500).send('Error al actualizar contenido');
+  }
+});
+
+// Configurar almacenamiento
+const storage = multer.diskStorage({
+  destination: 'public/images/',
+  filename: (req, file, cb) => {
+    const ext = path.extname(file.originalname);
+    const nombre = `${Date.now()}${ext}`;
+    cb(null, nombre);
+  }
+});
+const upload = multer({ storage });
+
+// Ruta para subir imagen
+app.post('/admin/subir-imagen', upload.single('imagen'), async (req, res) => {
+  const clave = req.body.clave;
+  const ruta = `/images/${req.file.filename}`;
+
+  try {
+    await con.query('UPDATE contenido SET valor = ? WHERE clave = ?', [ruta, clave]);
+    res.send('Imagen actualizada correctamente');
+  } catch (err) {
+    console.error('Error al guardar imagen:', err);
+    res.status(500).send('Error al guardar imagen');
   }
 });
 
