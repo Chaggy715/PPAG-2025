@@ -436,7 +436,17 @@
         </section>
 
         <section class="nosotros">
-          
+          <div>
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t16">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t16 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+          </div>
         </section>
         <%- include('partials/footer') %>
     </body>
