@@ -14,7 +14,6 @@
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#H">Inicio</a></li>
                     <li><a href="#N">Nosotros</a></li>
                     <li><a href="#M">Psicopedagógico</a></li>
                     <li><a href="#I">Personal</a></li>
@@ -29,20 +28,20 @@
 
             <!-- Este es para el título -->
             <form class="ftxt" onsubmit="return actualizar(this, event)">
-                <input type="hidden" name="clave" value="C_t1">
-                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t1 %></textarea>
-                <button type="submit">Actualizar</button>
-                <span class="mensaje">
-  <span class="texto-mensaje"></span>
-  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
-</span>
+              <input type="hidden" name="clave" value="C_t1">
+              <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t1 %></textarea>
+              <button class="UD" type="submit">Actualizar</button>
+              <span class="mensaje">
+                <span class="texto-mensaje"></span>
+                <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+              </span>
             </form>
 
             <!-- Este es para el párrafo -->
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p1">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p1 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -52,7 +51,7 @@
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p2">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p2 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -70,7 +69,7 @@
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t2">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t2 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -80,7 +79,7 @@
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p3">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p3 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -112,7 +111,7 @@
                 <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t3">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t3 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -122,7 +121,7 @@
                 <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p4">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p4 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -152,7 +151,7 @@
                 <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t4">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t4 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -162,7 +161,7 @@
                 <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p5">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p5 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -191,7 +190,7 @@
                 <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t5">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t5 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -201,7 +200,7 @@
                 <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p6">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p6 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -230,7 +229,7 @@
                     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t6">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t6 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -240,7 +239,7 @@
                     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p7">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p7 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -269,7 +268,7 @@
                         <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t7">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t7 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -279,7 +278,7 @@
                         <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p8">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p8 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -308,7 +307,7 @@
                 <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t8">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t8 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -318,7 +317,7 @@
                 <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p9">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p9 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -335,7 +334,7 @@
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t9">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t9 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -347,7 +346,7 @@
                     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t10">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t10 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -357,7 +356,7 @@
                     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t11">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t11 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -367,7 +366,7 @@
                     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p10">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p10 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -379,7 +378,7 @@
                     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t12">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t12 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -389,7 +388,7 @@
                     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t13">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t13 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -399,7 +398,7 @@
                     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p11">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p11 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -414,7 +413,7 @@
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t14">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t14 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -426,7 +425,7 @@
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t15">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t15 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -440,7 +439,7 @@
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t16">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t16 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -449,7 +448,7 @@
              <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t17">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t17 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -458,7 +457,7 @@
              <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="c_p12">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p12 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -471,7 +470,7 @@
  <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t18">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t18 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
