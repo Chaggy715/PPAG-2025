@@ -1,7 +1,24 @@
-const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
-const mysql = require("mysql2");
+import express from "express";
+import multer from 'multer';
+import path from "path";
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+import bodyParser from "body-parser";
+
+import mysql from "mysql2";
+
+// Crear la conexión a la base de datos MySQL
+const connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "ppag", // Nombre de tu base de datos
+});
+
+const con = connection.promise();
+const [rows] = await con.query('SELECT * FROM contenido');
 
 const app = express();
 const port = 3000;
@@ -18,25 +35,67 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Crear la conexión a la base de datos MySQL
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "ppag", // Nombre de tu base de datos
+app.post('/admin/actualizar', async (req, res) => {
+  const { clave, valor } = req.body;
+
+  try {
+    await con.query('UPDATE contenido SET valor = ? WHERE clave = ?', [valor, clave]);
+    res.send('Contenido actualizado correctamente');
+  } catch (error) {
+    console.error('Error al actualizar contenido:', error);
+    res.status(500).send('Error al actualizar contenido');
+  }
+});
+
+// Configurar almacenamiento
+const storage = multer.diskStorage({
+  destination: 'public/images/',
+  filename: (req, file, cb) => {
+    const ext = path.extname(file.originalname);
+    const nombre = `${Date.now()}${ext}`;
+    cb(null, nombre);
+  }
+});
+const upload = multer({ storage });
+
+// Ruta para subir imagen
+app.post('/admin/subir-imagen', upload.single('imagen'), async (req, res) => {
+  const clave = req.body.clave;
+  const ruta = `/images/${req.file.filename}`;
+
+  try {
+    await con.query('UPDATE contenido SET valor = ? WHERE clave = ?', [ruta, clave]);
+    res.send('Imagen actualizada correctamente');
+  } catch (err) {
+    console.error('Error al guardar imagen:', err);
+    res.status(500).send('Error al guardar imagen');
+  }
 });
 
 app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/g", (req, res) => {
-  res.render("general");
+app.get("/g", async (req, res) => {
+  const [rows] = await con.query('SELECT * FROM contenido');
+  
+  const contenido = {};
+  rows.forEach(row => {
+    contenido[row.clave] = row.valor;
+  });
+  res.render("general", { contenido });
 });
 
-app.get("/c", (req, res) => {
-  res.render("contactos");
+app.get("/c", async (req, res) => {
+  const [rows] = await con.query('SELECT * FROM contenido');
+  
+  const contenido = {};
+  rows.forEach(row => {
+    contenido[row.clave] = row.valor;
+  });
+  res.render("contactos", { contenido });
 });
 
 app.get("/r", (req, res) => {
@@ -51,8 +110,15 @@ app.get("/ue", (req, res) => {
   res.render("user-exists");
 });
 
-app.get("/a", (req, res) => {
-  res.render("admin");
+app.get("/a", async (req, res) => {
+  const [rows] = await con.query('SELECT * FROM contenido');
+  const contenido = {};
+
+  rows.forEach(row => {
+    contenido[row.clave] = row.valor;
+  });
+
+  res.render('admin', { contenido });
 });
 
 // Ruta para manejar la validación de login

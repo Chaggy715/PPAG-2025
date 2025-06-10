@@ -16,8 +16,8 @@
                 <ul>
                     <li><a href="#H">Inicio</a></li>
                     <li><a href="#N">Nosotros</a></li>
-                    <li><a href="#I">Personal</a></li>
                     <li><a href="#M">Psicopedagógico</a></li>
+                    <li><a href="#I">Personal</a></li>
                     <li><a href="/g">BECAS-2025</a></li>
                 </ul>
         </div>
@@ -26,15 +26,9 @@
     <section class="nosotros">
         <div id="N"></div>
         <div class="nosotros-content container">
-            <h2>¿Quiénes Somos?</h2>
-            <h3 class="h3n">Contribuimos a mejorar la calidad de tu educación
-                integral mediante la ejecución de programas y
-                actividades psico-afectivas; la detección, evaluación
-                y atención de dificultades de aprendizaje y el
-                acompañamiento a todo el personal del Colegio.</h3>
-            <p class="pn">"Siembra una idea y cosecharás una acción, siembra una acción y cosecharás un hábito, siembra buenos hábitos y generarás tu futuro"
-                <br>(Mathey Kelly)
-            </p>
+            <h2><%= contenido.C_t1 %></h2>
+            <h3 class="h3n"><%= contenido.C_p1 %></h3>
+            <p class="pn"><%= contenido.C_p2 %></p>
         </div>
     </section>
 
@@ -42,80 +36,61 @@
     <main class="mision">
         <div id="M"></div>
         <div class="txt">
-            <h2>¿Qué hacemos en psicopedagógico?</h2>
-            <p>A veces se tiene la idea de que uno acude "al psicopedagógico"
-                cuando te mandan llamar o tienes algún problema emocional grave.
-                La realidad es muy distinta, aquí te dejamos algunas de las
-                opciones que podemos ofrecerte para tu crecimiento personal.</p>
+            <h2><%= contenido.C_t2 %></h2>
+            <p><%= contenido.C_p3 %></p>
             </div>
         <div class="mision-content container">
             <div class="info">
-                <img src="images/1.png?v=1" alt="Imágen">
-                <h3>Acompañamiento Emocional</h3>
-                <p>Escuchamos y aconsejamos a todos aquellos que se acercan a
-                    nosotros ya sea por dudas en su toma de decisiones,
-                    conflictos internos y hasta alegrías por sus logros.
-                    La idea es verte crecer.</p>
+                <img src="<%= contenido.C_i1 %>?v=1" alt="Imágen">
+                <h3><%= contenido.C_t3 %></h3>
+                <p><%= contenido.C_p4 %></p>
             </div>
+
             <div class="info">
-                <img src="images/2.png?v=1" alt="Imágen">
-                <h3>Acompañamiento Académico</h3>
-                <p>Si consideras que tus calificaciones pueden mejorar o
-                    quieres saber cómo aprender más rápido las cosas acércate
-                    a nosotros.</p>
+                <img src="<%= contenido.C_i2 %>?v=1" alt="Imágen">
+                <h3><%= contenido.C_t4 %></h3>
+                <p><%= contenido.C_p5 %></p>
                 </div>
+
                 <div class="info">
-                    <img src="images/3.png?v=1" alt="Imágen">
-                <h3>Orientación Vocacional</h3>
-                <p>Actualmente el mundo profesional ofrece una inmensa
-                    variedad de carreras. Nosotras aplicamos pruebas y
-                    por medio de entrevistas y ejercicios podemos ayudarte
-                    a elegir.</p>
+                    <img src="<%= contenido.C_i3 %>?v=1" alt="Imágen">
+                <h3><%= contenido.C_t5 %></h3>
+                <p><%= contenido.C_p6 %></p>
                 </div>
+
                 <div class="info">
-                    <img src="images/4.png?v=1" alt="Imágen">
-                    <h3>Exámenes de Admisión</h3>
-                    <p>Como parte de nuestra función administrativa aplicamos
-                        batería de pruebas para valorar el nivel de conocimientos
-                        de cada aspirante y ver si cumple con los requisitos para
-                        ser alumno del Colegio.</p>
+                    <img src="<%= contenido.C_i4 %>?v=1" alt="Imágen">
+                    <h3><%= contenido.C_t6 %></h3>
+                    <p><%= contenido.C_p7 %></p>
                     </div>
+
                     <div class="info">
-                        <img src="images/5.png?v=1" alt="Imágen">
-                        <h3>Observaciones de Clase</h3>
-                        <p>Durante el ciclo académico, observamos clases de sus
-                            profesores y en base a una rúbrica hacemos sugerencias
-                            al docente para que tengas una educación de calidad.</p>
+                        <img src="<%= contenido.C_i5 %>?v=1" alt="Imágen">
+                        <h3><%= contenido.C_t7 %></h3>
+                        <p><%= contenido.C_p8 %></p>
                         </div>
+
                         <div class="info">
-                <img src="images/6.png?v=1" alt="Imágen">
-                <h3>Escuela para Padres</h3>
-                <p>Organizamos un plan de conferencias en el año para que los
-                    padres de familia tengan recursos y puedan educar a sus
-                    hijos de manera cariñosa.</p>
+                <img src="<%= contenido.C_i6 %>?v=1" alt="Imágen">
+                <h3><%= contenido.C_t8 %></h3>
+                <p><%= contenido.C_p9 %></p>
                 </div>
+                
             </div>
         </main>
         <section class="integrantes">
             <div id="I"></div>
-            <h2>Integrantes del Equipo Preparatoria</h2>
+            <h2><%= contenido.C_t9 %></h2>
             <div class="integrantes-content container">
                 <div class="ale info-1">
-                    <h3>Mtra. Alejandra Ibañez</h3>
-                    <h4>Coordinadora del Departamento Psicopedagógico</h4>
-                    <p>• Maestría en psicopedagogía por la Universidad de la Rioja.<br>
-                        • Licenciada en psicología por la UNIVA.<br>
-                        • Diplomado en terapia breve basada en soluciones.<br>
-                        • Experiencia en área laboral, clínica y educativa.<br>
-                        • Facilitadora en pláticas y talleres de desarrollo humano.</p>
+                    <h3><%= contenido.C_t10 %></h3>
+                    <h4><%= contenido.C_t11 %></h4>
+                    <p class="lista"><%= contenido.C_p10 %></p>
                 </div>
                 <div class="karla info-1">
-                    <h3>Lic. Karla Ortega</h3>
-                    <h4>Sección Preparatoria</h4>
-                    <p>• Licenciada en pedagogía por la Universidad del Valle de México.<br>
-                        • Diplomado en competencias para docentes de educación media superior y superior.<br>
-                        • Diplomado en la creación de educación positiva y de vanguardia.<br>
-                        • Certificación en la aplicación de la metodología básica de investigación en el ámbito educativo.</p>
+                    <h3><%= contenido.C_t12 %></h3>
+                    <h4><%= contenido.C_t13 %></h4>
+                    <p class="lista"><%= contenido.C_p11 %></p>
                 </div>
             </div>
         </section>

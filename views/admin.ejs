@@ -1,7 +1,7 @@
 <%- include('partials/header', {tituloWeb: 'Psicopedagógico'}) %>
 <body>
-    <link rel="preload" href="css/contactos.css" as="style"> <!-- precargar plantillas -->
-    <link rel="stylesheet" href="/css/contactos.css?v=1"> <!-- El ?v=1 es para evitar caché -->
+    <link rel="preload" href="css/admin.css" as="style"> <!-- precargar plantillas -->
+    <link rel="stylesheet" href="/css/admin.css?v=1"> <!-- El ?v=1 es para evitar caché -->
    
     <header id="H" class="header">
         <div class="menu container">
@@ -16,9 +16,8 @@
                 <ul>
                     <li><a href="#H">Inicio</a></li>
                     <li><a href="#N">Nosotros</a></li>
-                    <li><a href="#I">Personal</a></li>
                     <li><a href="#M">Psicopedagógico</a></li>
-                    <li><a href="/g">BECAS-2025</a></li>
+                    <li><a href="#I">Personal</a></li>
                 </ul>
         </div>
     </header>
@@ -26,99 +25,474 @@
     <section class="nosotros">
         <div id="N"></div>
         <div class="nosotros-content container">
-            <h2>Admin</h2>
-            <h3 class="h3n">Contribuimos a mejorar la calidad de tu educación
-                integral mediante la ejecución de programas y
-                actividades psico-afectivas; la detección, evaluación
-                y atención de dificultades de aprendizaje y el
-                acompañamiento a todo el personal del Colegio.</h3>
-            <p class="pn">"Siembra una idea y cosecharás una acción, siembra una acción y cosecharás un hábito, siembra buenos hábitos y generarás tu futuro"
-                <br>(Mathey Kelly)
-            </p>
+            <h1>Parte Verde:</h1>
+
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t1">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t1 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p1">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p1 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p2">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p2 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
         </div>
+
     </section>
 
     
     <main class="mision">
         <div id="M"></div>
         <div class="txt">
-            <h2>¿Qué hacemos en psicopedagógico?</h2>
-            <p>A veces se tiene la idea de que uno acude "al psicopedagógico"
-                cuando te mandan llamar o tienes algún problema emocional grave.
-                La realidad es muy distinta, aquí te dejamos algunas de las
-                opciones que podemos ofrecerte para tu crecimiento personal.</p>
+          <h1>Parte Gris:</h1>
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p2">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t2 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+            
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p2">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p3 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
             </div>
-        <div class="mision-content container">
+
+        <div class="mision-content container">         
             <div class="info">
-                <img src="images/1.png?v=1" alt="Imágen">
-                <h3>Acompañamiento Emocional</h3>
-                <p>Escuchamos y aconsejamos a todos aquellos que se acercan a
-                    nosotros ya sea por dudas en su toma de decisiones,
-                    conflictos internos y hasta alegrías por sus logros.
-                    La idea es verte crecer.</p>
+                <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i1">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i1 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i1">
+      </div>
+    
+      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i1'); mostrarBoton(this, 'boton-img')">
+    
+      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+                
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t3">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t3 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p4">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p4 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
             </div>
+
+
             <div class="info">
-                <img src="images/2.png?v=1" alt="Imágen">
-                <h3>Acompañamiento Académico</h3>
-                <p>Si consideras que tus calificaciones pueden mejorar o
-                    quieres saber cómo aprender más rápido las cosas acércate
-                    a nosotros.</p>
+                <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i2">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i2 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i2">
+      </div>
+    
+      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i2'); mostrarBoton(this, 'boton-img')">
+    
+      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t4">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t4 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p5">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p5 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
                 </div>
+
                 <div class="info">
-                    <img src="images/3.png?v=1" alt="Imágen">
-                <h3>Orientación Vocacional</h3>
-                <p>Actualmente el mundo profesional ofrece una inmensa
-                    variedad de carreras. Nosotras aplicamos pruebas y
-                    por medio de entrevistas y ejercicios podemos ayudarte
-                    a elegir.</p>
+                    <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i3">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i3 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i3">
+      </div>
+    
+      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i3'); mostrarBoton(this, 'boton-img')">
+    
+      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t5">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t5 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p6">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p6 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
                 </div>
+
                 <div class="info">
-                    <img src="images/4.png?v=1" alt="Imágen">
-                    <h3>Exámenes de Admisión</h3>
-                    <p>Como parte de nuestra función administrativa aplicamos
-                        batería de pruebas para valorar el nivel de conocimientos
-                        de cada aspirante y ver si cumple con los requisitos para
-                        ser alumno del Colegio.</p>
+                    <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i4">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i4 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i4">
+      </div>
+    
+      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i4'); mostrarBoton(this, 'boton-img')">
+    
+      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+                    <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t6">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t6 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                    <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p7">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p7 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
                     </div>
+
                     <div class="info">
-                        <img src="images/5.png?v=1" alt="Imágen">
-                        <h3>Observaciones de Clase</h3>
-                        <p>Durante el ciclo académico, observamos clases de sus
-                            profesores y en base a una rúbrica hacemos sugerencias
-                            al docente para que tengas una educación de calidad.</p>
+                        <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i5">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i5 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i5">
+      </div>
+    
+      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i5'); mostrarBoton(this, 'boton-img')">
+    
+      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+                        <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t7">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t7 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                        <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p8">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p8 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
                         </div>
+
                         <div class="info">
-                <img src="images/6.png?v=1" alt="Imágen">
-                <h3>Escuela para Padres</h3>
-                <p>Organizamos un plan de conferencias en el año para que los
-                    padres de familia tengan recursos y puedan educar a sus
-                    hijos de manera cariñosa.</p>
+                <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i6">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i6 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i6">
+      </div>
+    
+      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i6'); mostrarBoton(this, 'boton-img')">
+    
+      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t8">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t8 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p9">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p9 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
                 </div>
+
             </div>
         </main>
         <section class="integrantes">
             <div id="I"></div>
-            <h2>Integrantes del Equipo Preparatoria</h2>
+            <h1>Parte Rosa:</h1>
+
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t9">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t9 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
             <div class="integrantes-content container">
                 <div class="ale info-1">
-                    <h3>Mtra. Alejandra Ibañez</h3>
-                    <h4>Coordinadora del Departamento Psicopedagógico</h4>
-                    <p>• Maestría en psicopedagogía por la Universidad de la Rioja.<br>
-                        • Licenciada en psicología por la UNIVA.<br>
-                        • Diplomado en terapia breve basada en soluciones.<br>
-                        • Experiencia en área laboral, clínica y educativa.<br>
-                        • Facilitadora en pláticas y talleres de desarrollo humano.</p>
+                    <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t10">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t10 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                    <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t11">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t11 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                    <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p10">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p10 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
                 </div>
+
                 <div class="karla info-1">
-                    <h3>Lic. Karla Ortega</h3>
-                    <h4>Sección Preparatoria</h4>
-                    <p>• Licenciada en pedagogía por la Universidad del Valle de México.<br>
-                        • Diplomado en competencias para docentes de educación media superior y superior.<br>
-                        • Diplomado en la creación de educación positiva y de vanguardia.<br>
-                        • Certificación en la aplicación de la metodología básica de investigación en el ámbito educativo.</p>
+                    <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t12">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t12 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                    <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t13">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t13 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+                    <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p11">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p11 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
                 </div>
             </div>
         </section>
         <%- include('partials/footer') %>
     </body>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('textarea').forEach(ajustarAltura);
+  });
+
+async function actualizar(formulario, event) {
+  event.preventDefault();
+
+  const clave = formulario.querySelector('[name="clave"]').value;
+  const valor = formulario.querySelector('[name="valor"]').value;
+  const mensaje = formulario.querySelector('.mensaje');
+  const textoMensaje = mensaje.querySelector('.texto-mensaje');
+
+  try {
+    const respuesta = await fetch('/admin/actualizar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ clave, valor })
+    });
+
+    const texto = await respuesta.text();
+
+    textoMensaje.textContent = texto;
+    mensaje.style.color = respuesta.ok ? 'green' : 'red';
+    mensaje.style.display = 'inline-flex';  // aparece la cruz y el texto
+
+  } catch (err) {
+    textoMensaje.textContent = 'Error al actualizar';
+    mensaje.style.color = 'red';
+    mensaje.style.display = 'inline-flex';
+  }
+}
+
+function cerrarMensaje(boton) {
+  const mensaje = boton.parentElement;
+  const textoMensaje = mensaje.querySelector('.texto-mensaje');
+  textoMensaje.textContent = '';
+  mensaje.style.display = 'none';
+}
+
+function ajustarAltura(textarea) {
+    textarea.style.height = 'auto'; // Reinicia altura
+    textarea.style.height = textarea.scrollHeight + 'px'; // Ajusta a contenido
+  }
+
+function mostrarPreview(input, idPreview) {
+    const file = input.files[0];
+    const preview = document.getElementById(idPreview);
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = e => {
+        preview.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+async function subirImagen(formulario, event) {
+  event.preventDefault();
+
+  const formData = new FormData(formulario);
+  const mensaje = formulario.querySelector('.mensaje');
+  const textoMensaje = mensaje.querySelector('.texto-mensaje');
+
+  try {
+    const respuesta = await fetch('/admin/subir-imagen', {
+      method: 'POST',
+      body: formData
+    });
+
+    const texto = await respuesta.text();
+
+    textoMensaje.textContent = texto;
+    mensaje.style.color = respuesta.ok ? 'green' : 'red';
+    mensaje.style.display = 'inline-flex';
+  } catch (err) {
+    textoMensaje.textContent = 'Error al subir imagen';
+    mensaje.style.color = 'red';
+    mensaje.style.display = 'inline-flex';
+  }
+}
+function mostrarBoton(inputFile, idBoton) {
+  const boton = document.getElementById(idBoton);
+  if (inputFile.files && inputFile.files.length > 0) {
+    boton.style.display = 'inline-block';
+  } else {
+    boton.style.display = 'none';
+  }
+}
+</script>
     </html>

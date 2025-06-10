@@ -63,14 +63,20 @@
       .navbar{
         margin-right: -2rem;
       }
+      li{
+  background-color: #626261;
+  border-radius: 25px;
+  margin-left: 1rem;
+  transition: 0.3s;
+}
       .menu .navbar ul li{
         position: relative;
         float: left;
       }
       .menu .navbar ul li a {
         font-size: 20px;
-        padding: 20px;
-        color: black;
+        padding: 12px 20px;
+        color: #013a89;
         display: block;
         transition: 0.3s;
         font-weight: 700;
@@ -78,6 +84,9 @@
       .menu .navbar ul li a:hover {
         color: #00368c;
       }
+      li:hover {
+  background-color: #ba0031;
+}
       #menu{
         display: none;
       }
@@ -258,7 +267,7 @@ background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: bisque;
+  background-color: #626261;
   padding: 1rem 5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
@@ -277,14 +286,11 @@ background-repeat: no-repeat;
 }
 .menu .navbar ul li a {
   font-size: 20px;
-  padding: 20px;
-  color: black;
+  padding:12px 20px;
+  color: #013a89;
   display: block;
   transition: 0.3s;
   font-weight: 700;
-}
-.menu .navbar ul li a:hover {
-  color: peru;
 }
 #menu{
   display: none;
@@ -436,8 +442,6 @@ background-repeat: no-repeat;
   .menu .navbar ul li{
     width: 100%;
     background-color: rgb(219, 187, 148);
-    border: 1px solid;
-    border-color: rgb(241, 192, 127);
   }
 
   #menu:checked ~ .navbar{
