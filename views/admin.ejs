@@ -27,6 +27,7 @@
         <div class="nosotros-content container">
             <h1>Parte Verde:</h1>
 
+            <!-- Este es para el título -->
             <form onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t1">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t1 %></textarea>
@@ -37,6 +38,7 @@
 </span>
             </form>
 
+            <!-- Este es para el párrafo -->
             <form onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p1">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p1 %></textarea>
@@ -66,7 +68,7 @@
         <div class="txt">
           <h1>Parte Gris:</h1>
             <form onsubmit="return actualizar(this, event)">
-                <input type="hidden" name="clave" value="C_p2">
+                <input type="hidden" name="clave" value="C_t2">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t2 %></textarea>
                 <button type="submit">Actualizar</button>
                 <span class="mensaje">
@@ -76,7 +78,7 @@
             </form>
             
             <form onsubmit="return actualizar(this, event)">
-                <input type="hidden" name="clave" value="C_p2">
+                <input type="hidden" name="clave" value="C_p3">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p3 %></textarea>
                 <button type="submit">Actualizar</button>
                 <span class="mensaje">
@@ -88,6 +90,8 @@
 
         <div class="mision-content container">         
             <div class="info">
+
+              <!-- Este es para la imágen -->
                 <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i1">
     
