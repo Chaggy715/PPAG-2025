@@ -15,6 +15,24 @@ body {
 h2{
   font-size: 6rem;
 }
+
+.mensaje {
+  display: none; /* no se ve nada al cargar */
+  font-weight: bold;
+  margin-left: 10px;
+  align-items: center;
+  gap: 5px;
+}
+
+.cerrar-mensaje {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0 5px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

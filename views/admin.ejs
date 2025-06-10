@@ -25,16 +25,39 @@
     <section class="nosotros">
         <div id="N"></div>
         <div class="nosotros-content container">
-            <h2>Admin</h2>
-            <h3 class="h3n">Contribuimos a mejorar la calidad de tu educación
-                integral mediante la ejecución de programas y
-                actividades psico-afectivas; la detección, evaluación
-                y atención de dificultades de aprendizaje y el
-                acompañamiento a todo el personal del Colegio.</h3>
-            <p class="pn">"Siembra una idea y cosecharás una acción, siembra una acción y cosecharás un hábito, siembra buenos hábitos y generarás tu futuro"
-                <br>(Mathey Kelly)
-            </p>
+            <h1>Parte Verde:</h1>
+
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t1">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t1 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p1">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p1 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+
+            <form onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p2">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p2 %></textarea>
+                <button type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
         </div>
+
     </section>
 
     
@@ -120,4 +143,46 @@
         </section>
         <%- include('partials/footer') %>
     </body>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('textarea').forEach(ajustarAltura);
+  });
+async function actualizar(formulario, event) {
+  event.preventDefault();
+
+  const clave = formulario.querySelector('[name="clave"]').value;
+  const valor = formulario.querySelector('[name="valor"]').value;
+  const mensaje = formulario.querySelector('.mensaje');
+  const textoMensaje = mensaje.querySelector('.texto-mensaje');
+
+  try {
+    const respuesta = await fetch('/admin/actualizar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ clave, valor })
+    });
+
+    const texto = await respuesta.text();
+
+    textoMensaje.textContent = texto;
+    mensaje.style.color = respuesta.ok ? 'green' : 'red';
+    mensaje.style.display = 'inline-flex';  // aparece la cruz y el texto
+
+  } catch (err) {
+    textoMensaje.textContent = 'Error al actualizar';
+    mensaje.style.color = 'red';
+    mensaje.style.display = 'inline-flex';
+  }
+}
+function cerrarMensaje(boton) {
+  const mensaje = boton.parentElement;
+  const textoMensaje = mensaje.querySelector('.texto-mensaje');
+  textoMensaje.textContent = '';
+  mensaje.style.display = 'none';
+}
+function ajustarAltura(textarea) {
+    textarea.style.height = 'auto'; // Reinicia altura
+    textarea.style.height = textarea.scrollHeight + 'px'; // Ajusta a contenido
+  }
+</script>
     </html>
