@@ -875,8 +875,30 @@
           </div>
         </section>
 
-        <section>
+        <section class="link">
+          <div class="link-content container">
+            <h1>Link para el Itinerario:</h1>
 
+<form class="fl" onsubmit="actualizar(this, event)">
+  <input type="hidden" name="clave" value="C_l2">
+
+  <input class="AL"
+    type="text"
+    name="valor"
+    placeholder="Aquí va el nuevo link"
+    value="<%= contenido.C_l2 %>"
+    oninput="habilitarBoton(this)"
+  >
+
+  <button type="submit" id="boton-l1" class="UL" disabled>Actualizar link</button>
+
+  <span class="mensaje" style="display: none;">
+    <span class="texto-mensaje"></span>
+    <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">✖</button>
+  </span>
+</form>
+
+          </div>
         </section>
 
         
