@@ -480,18 +480,21 @@
            </form>
           </div>
         </section >
-        <section class="integrantes">
-          <div id="I">
- <form onsubmit="return actualizar(this, event)">
-                <input type="hidden" name="clave" value="C_t18">
-                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t18 %></textarea>
-                <button type="submit">Actualizar</button>
-                <span class="mensaje">
-  <span class="texto-mensaje"></span>
-  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
-</span>
-            </form>
-            <form onsubmit="return actualizar(this, event)">
+
+        <section class="contempla">
+          <div class="contempla-content container">
+            <h1>Parte Contempla los Subpasos:</h1>
+            <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_t18">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t18 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+
+                       <form onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t19">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t19 %></textarea>
                 <button type="submit">Actualizar</button>
@@ -567,20 +570,7 @@
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
 </span>
             </form>
-        </section>
-
-        <section class="contempla">
-          <div class="contempla-content container">
-            <h1>Parte Contempla los Subpasos:</h1>
-            <form class="ftxt" onsubmit="return actualizar(this, event)">
-                           <input type="hidden" name="clave" value="C_t18">
-                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t18 %></textarea>
-                           <button class="UD" type="submit">Actualizar</button>
-                           <span class="mensaje">
-             <span class="texto-mensaje"></span>
-             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
-           </span>
-                       </form>
+                       
           </div>
         </section >
 
@@ -589,9 +579,7 @@
           <div class="considera-content container">
             <h1>Parte Considera al Momento:</h1>
           </div>
-
           <div>
-
              <form class="ftxt" onsubmit="return actualizar(this, event)">
                            <input type="hidden" name="clave" value="C_t21">
                            <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t21 %></textarea>
@@ -601,7 +589,8 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
-                        <form class="ftxt" onsubmit="return actualizar(this, event)">
+
+                      <form class="ftxt" onsubmit="return actualizar(this, event)">
                            <input type="hidden" name="clave" value="C_p15">
                            <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p15 %></textarea>
                            <button class="UD" type="submit">Actualizar</button>
@@ -647,6 +636,7 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
+
           </div>
 
         </section>
