@@ -172,6 +172,23 @@ li:hover {
   margin-bottom: -.5rem;
 }
 
+.fl{
+  width: 100%;
+  align-items: center;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.AL{
+  padding: 8px 12px 10px 12px;
+  border-radius: 20px;
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+  border: none;
+  width: 70%;
+}
+
 textarea{
   padding: 8px 12px 10px 12px;
   border-radius: 20px;
@@ -222,6 +239,27 @@ textarea{
     display: flex;
     flex-direction: column; /* Organiza los elementos en columna */
     align-items: center; /* Centra los elementos */
+}
+
+.UL:diabled{
+  background-color: white;
+}
+.UL{
+  font-size: 3rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 40px;
+  font-weight: bold;
+  border: none;
+  margin-top: 1.5rem;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+.UL:enabled{
+  background-color: #626261;
+}
+.UL:hover:enabled{
+  background-color: #323337;
+  color: white;
 }
 
 #nombre-archivo {
@@ -278,6 +316,50 @@ label:hover{
 .cerrar-mensaje:hover{
   background-color: #626261;
   color: black;
+}
+
+.concurso {
+  padding: 1rem 6rem 9rem 6rem;
+  background-color: #2aaa3b;
+  position: relative;
+}
+.concurso-content {
+  text-align: center;
+  width: 100%;
+  max-width: none;
+}
+
+.contempla {
+  padding: 1rem 6rem 8rem 6rem;
+  background-color: #2a77aa;
+  position: relative;
+}
+.contempla-content {
+  text-align: center;
+  width: 100%;
+  max-width: none;
+}
+
+.considera {
+  padding: 4.5rem 6rem 8rem 6rem;
+  background-color: #aa972a;
+  position: relative;
+}
+.considera-content {
+  text-align: center;
+  width: 100%;
+  max-width: none;
+}
+
+.link {
+  padding: 1rem 6rem 8rem 6rem;
+  background-color: #aa2aa4;
+  position: relative;
+}
+.link-content {
+  text-align: center;
+  width: 100%;
+  max-width: none;
 }
 
 @media(max-width:991px){
