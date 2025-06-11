@@ -16,7 +16,7 @@ h1{
   text-align: center;
   text-transform: uppercase;        
   color: #ba0031;
-  font-size: 13rem;
+  font-size: 15rem;
   margin-bottom: -1rem;
 }
 h2{
@@ -108,6 +108,22 @@ li:hover {
   color: #414247;
   margin-bottom: 4rem;
   line-height: 4rem;
+}
+button{
+  font-size: 2.5rem;
+  padding: 1.5rem 3rem;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  background-color: #626261;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+a{
+  color: #ba0031;
+}
+button:hover{
+  background-color: #013a89;
 }
 
 @media(max-width:991px){
