@@ -98,6 +98,16 @@ app.get("/c", async (req, res) => {
   res.render("contactos", { contenido });
 });
 
+app.get("/e", async (req, res) => {
+  const [rows] = await con.query('SELECT * FROM contenido');
+  
+  const contenido = {};
+  rows.forEach(row => {
+    contenido[row.clave] = row.valor;
+  });
+  res.render("expo", { contenido });
+});
+
 app.get("/r", (req, res) => {
   res.render("registro");
 });
