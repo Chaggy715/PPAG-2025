@@ -509,16 +509,19 @@
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
 </span>
             </form>
-             <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+             <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i7">
     
       <div class="preview-container">
-        <img src="<%= contenido.C_i7 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i7">
+        <img src="<%= contenido.C_i7 %>?v=2" alt="Imagen actual" class="preview-img" id="preview-C_i7">
       </div>
     
-      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i7'); mostrarBoton(this, 'boton-img')">
-    
-      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i7'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
     
       <span class="mensaje" style="display:none">
         <span class="texto-mensaje"></span>
@@ -526,16 +529,19 @@
       </span>
     </form>
 
-    <form onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+     <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i8">
     
       <div class="preview-container">
-        <img src="<%= contenido.C_i8 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i8">
+        <img src="<%= contenido.C_i8 %>?v=2" alt="Imagen actual" class="preview-img" id="preview-C_i8">
       </div>
     
-      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i8'); mostrarBoton(this, 'boton-img')">
-    
-      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i8'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
     
       <span class="mensaje" style="display:none">
         <span class="texto-mensaje"></span>
@@ -546,7 +552,7 @@
      <form onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t20">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t20 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -555,7 +561,7 @@
             <form onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p14">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p14 %></textarea>
-                <button type="submit">Actualizar</button>
+                <button class="UD" type="submit">Actualizar</button>
                 <span class="mensaje">
   <span class="texto-mensaje"></span>
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
@@ -586,6 +592,15 @@
 
           <div>
 
+             <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_t21">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t21 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
           </div>
 
         </section>
