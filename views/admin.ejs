@@ -484,35 +484,19 @@
         <section class="contempla">
           <div class="contempla-content container">
             <h1>Parte Contempla los Subpasos:</h1>
-            <form class="ftxt" onsubmit="return actualizar(this, event)">
-                           <input type="hidden" name="clave" value="C_t18">
-                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t18 %></textarea>
-                           <button class="UD" type="submit">Actualizar</button>
-                           <span class="mensaje">
-             <span class="texto-mensaje"></span>
-             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
-           </span>
-                       </form>
-
-                       <form onsubmit="return actualizar(this, event)">
-                <input type="hidden" name="clave" value="C_t19">
-                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t19 %></textarea>
-                <button type="submit">Actualizar</button>
-                <span class="mensaje">
-  <span class="texto-mensaje"></span>
-  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
-</span>
-            </form>
-             <form onsubmit="return actualizar(this, event)">
-                <input type="hidden" name="clave" value="C_p13">
-                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p13 %></textarea>
-                <button type="submit">Actualizar</button>
-                <span class="mensaje">
-  <span class="texto-mensaje"></span>
-  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
-</span>
-            </form>
-             <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+            <div class="container">
+              <form class="ftxt" onsubmit="return actualizar(this, event)">
+                             <input type="hidden" name="clave" value="C_t18">
+                             <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t18 %></textarea>
+                             <button class="UD" type="submit">Actualizar</button>
+                             <span class="mensaje">
+               <span class="texto-mensaje"></span>
+               <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+             </span>
+                         </form>
+            </div>
+<div style="margin-top: 7rem;"></div>
+                       <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i7">
     
       <div class="preview-container">
@@ -532,6 +516,25 @@
       </span>
     </form>
 
+                       <form class="ftxt" onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_t19">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t19 %></textarea>
+                <button class="UD" type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+             <form class="ftxt" onsubmit="return actualizar(this, event)">
+                <input type="hidden" name="clave" value="C_p13">
+                <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p13 %></textarea>
+                <button class="UD" type="submit">Actualizar</button>
+                <span class="mensaje">
+  <span class="texto-mensaje"></span>
+  <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+</span>
+            </form>
+<div style="margin-top: 7rem;"></div>
      <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i8">
     
@@ -552,7 +555,7 @@
       </span>
     </form>
 
-     <form onsubmit="return actualizar(this, event)">
+     <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t20">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t20 %></textarea>
                 <button class="UD" type="submit">Actualizar</button>
@@ -561,7 +564,7 @@
   <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
 </span>
             </form>
-            <form onsubmit="return actualizar(this, event)">
+            <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_p14">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p14 %></textarea>
                 <button class="UD" type="submit">Actualizar</button>
@@ -599,6 +602,7 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
+<div style="margin-top: 7rem;"></div>
                         <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i9">
     
@@ -636,7 +640,7 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
-
+<div style="margin-top: 7rem;"></div>
  <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i10">
     
@@ -676,7 +680,7 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
-
+<div style="margin-top: 7rem;"></div>
                        <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i11">
     
@@ -716,7 +720,7 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
-
+<div style="margin-top: 7rem;"></div>
                          <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i12">
     
@@ -755,8 +759,7 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
-
-                       
+<div style="margin-top: 7rem;"></div>
                          <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i13">
     
@@ -795,7 +798,7 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
-
+<div style="margin-top: 7rem;"></div>
                         <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
       <input type="hidden" name="clave" value="C_i14">
     
