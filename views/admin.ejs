@@ -24,7 +24,7 @@
     <section class="nosotros">
         <div id="N"></div>
         <div class="nosotros-content container">
-            <h1>Parte Verde:</h1>
+            <h1>Parte Verde Contactos:</h1>
 
             <!-- Este es para el título -->
             <form class="ftxt" onsubmit="return actualizar(this, event)">
@@ -65,7 +65,7 @@
     <main class="mision">
         <div id="M"></div>
         <div class="txt">
-          <h1>Parte Rosa:</h1>
+          <h1>Parte Rosa Contactos:</h1>
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t2">
                 <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t2 %></textarea>
@@ -98,9 +98,12 @@
         <img src="<%= contenido.C_i1 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i1">
       </div>
     
-      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i1'); mostrarBoton(this, 'boton-img')">
-    
-      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i1'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
     
       <span class="mensaje" style="display:none">
         <span class="texto-mensaje"></span>
@@ -138,9 +141,12 @@
         <img src="<%= contenido.C_i2 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i2">
       </div>
     
-      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i2'); mostrarBoton(this, 'boton-img')">
-    
-      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i2'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
     
       <span class="mensaje" style="display:none">
         <span class="texto-mensaje"></span>
@@ -177,9 +183,12 @@
         <img src="<%= contenido.C_i3 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i3">
       </div>
     
-      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i3'); mostrarBoton(this, 'boton-img')">
-    
-      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i3'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
     
       <span class="mensaje" style="display:none">
         <span class="texto-mensaje"></span>
@@ -216,9 +225,12 @@
         <img src="<%= contenido.C_i4 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i4">
       </div>
     
-      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i4'); mostrarBoton(this, 'boton-img')">
-    
-      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i4'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
     
       <span class="mensaje" style="display:none">
         <span class="texto-mensaje"></span>
@@ -254,10 +266,13 @@
       <div class="preview-container">
         <img src="<%= contenido.C_i5 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i5">
       </div>
-    
-      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i5'); mostrarBoton(this, 'boton-img')">
-    
-      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i5'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
     
       <span class="mensaje" style="display:none">
         <span class="texto-mensaje"></span>
@@ -294,9 +309,12 @@
         <img src="<%= contenido.C_i6 %>?v=1" alt="Imagen actual" class="preview-img" id="preview-C_i6">
       </div>
     
-      <input type="file" name="imagen" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i6'); mostrarBoton(this, 'boton-img')">
-    
-      <button type="submit" id="boton-img" style="display: none;">Actualizar imagen</button>
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i6'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
     
       <span class="mensaje" style="display:none">
         <span class="texto-mensaje"></span>
@@ -329,7 +347,7 @@
         </main>
         <section class="integrantes">
             <div id="I"></div>
-            <h1>Parte Gris:</h1>
+            <h1>Parte Gris Contactos:</h1>
 
             <form class="ftxt" onsubmit="return actualizar(this, event)">
                 <input type="hidden" name="clave" value="C_t9">
@@ -493,10 +511,10 @@
     name="valor"
     placeholder="Aquí va el nuevo link"
     value="<%= contenido.C_l1 %>"
-    oninput="mostrarBotonLink(this, 'boton-l1')"
+    oninput="habilitarBoton(this)"
   >
 
-  <button type="submit" id="boton-l1" style="display: none;">Actualizar link</button>
+  <button type="submit" id="boton-l1" disabled>Actualizar link</button>
 
   <span class="mensaje" style="display: none;">
     <span class="texto-mensaje"></span>
@@ -589,17 +607,13 @@ async function subirImagen(formulario, event) {
     mensaje.style.display = 'inline-flex';
   }
 }
-function mostrarBoton(inputFile, idBoton) {
-  const boton = document.getElementById(idBoton);
-  if (inputFile.files && inputFile.files.length > 0) {
-    boton.style.display = 'inline-block';
-  } else {
-    boton.style.display = 'none';
-  }
+function habilitarBoton(input) {
+  const boton = input.closest('form').querySelector('button');
+  boton.disabled = !input.value.trim();
 }
-function mostrarBotonLink(input, idBoton) {
-  const boton = document.getElementById(idBoton);
-  boton.style.display = input.value.trim() !== '' ? 'inline-block' : 'none';
+function actualizarTextoArchivo(input) {
+    const nombreArchivo = document.getElementById('nombre-archivo');
+    nombreArchivo.textContent = input.files.length ? input.files[0].name : "No file chosen";
 }
 </script>
     </html>
