@@ -127,6 +127,9 @@ button:hover{
 }
 
 @media(max-width:991px){
+  h1{
+    font-size: 6rem;
+  }
   .menu{
     padding: 30px;
     height: 2%;
