@@ -12,23 +12,25 @@ body {
   font-size: 16px; /* 1rem = 10px */
   font-family: 'Krub', sans-serif;
 }
+h1{
+  text-align: center;
+  text-transform: uppercase;        
+  color: burlywood;
+  font-size: 13rem;
+  margin-bottom: -1rem;
+}
 h2{
   font-size: 6rem;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .header{
   background-color: rgb(209, 209, 209);
-  background-image: url(../images/Logo-Psico.webp?v=1);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 80rem;
-  min-height: 75vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
-  margin-bottom: -8rem;
 }
 .menu{
   max-width: 100%;
@@ -88,7 +90,7 @@ li:hover {
   margin-bottom: 12.5rem;
 }
 .nosotros {
-  padding: 4.5rem 6rem 5rem 6rem;
+  padding: 4.5rem 5rem 5rem 5rem;
   background-color: #2aaa89;
   position: relative;
 }
