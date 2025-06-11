@@ -637,6 +637,204 @@
            </span>
                        </form>
 
+ <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i10">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i10 %>?v=2" alt="Imagen actual" class="preview-img" id="preview-C_i10">
+      </div>
+    
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i10'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+    <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_t23">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t23 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+
+                       <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_p17">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p17 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+
+                       <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i11">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i11 %>?v=2" alt="Imagen actual" class="preview-img" id="preview-C_i11">
+      </div>
+    
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i11'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+     <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_t24">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t24 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+
+                        <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_p18">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p18 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+
+                         <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i12">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i12 %>?v=2" alt="Imagen actual" class="preview-img" id="preview-C_i12">
+      </div>
+    
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i12'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+     <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_t25">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t25 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+                       <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_p19">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p19 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+
+                       
+                         <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i13">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i13 %>?v=2" alt="Imagen actual" class="preview-img" id="preview-C_i13">
+      </div>
+    
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i13'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+     <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_t26">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t26 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+                        <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_p20">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p20 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+
+                        <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i14">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i14 %>?v=2" alt="Imagen actual" class="preview-img" id="preview-C_i14">
+      </div>
+    
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i14'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
+
+     <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_t27">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t27 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+
+                       <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_p21">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_p21 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
           </div>
 
         </section>
