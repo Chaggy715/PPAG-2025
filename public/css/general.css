@@ -419,6 +419,21 @@ background-repeat: no-repeat;
   font-size: 40px;
 }
 
+/*los siguientes de lista son para no usar br en html y lo puedan editar facilmente*/
+.lista {
+  white-space: pre-wrap;
+}
+.lista::before {
+  content: "";
+}
+.lista {
+  display: block;
+}
+.lista span {
+  display: block;
+  margin-bottom: 8px;
+}
+
 @media(max-width:991px){
   .menu{
     padding: 30px;
