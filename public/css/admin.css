@@ -131,7 +131,7 @@ li:hover {
   margin-top: -12.5rem;
   margin-bottom: 12.5rem;
 }
-.mision{
+.Kati{
   padding: 4.5rem 6rem 4rem 6rem;
   background-color: #c6204b;
   position: relative;
@@ -319,7 +319,7 @@ label:hover{
 }
 
 .concurso {
-  padding: 1rem 6rem 9rem 6rem;
+  padding: 3rem 6rem 9rem 6rem;
   background-color: #2aaa3b;
   position: relative;
 }
@@ -330,7 +330,7 @@ label:hover{
 }
 
 .contempla {
-  padding: 1rem 6rem 8rem 6rem;
+  padding: 3rem 6rem 8rem 6rem;
   background-color: #2a77aa;
   position: relative;
 }
@@ -360,6 +360,24 @@ label:hover{
   text-align: center;
   width: 100%;
   max-width: none;
+}
+
+
+#C1{
+  margin-top: -11rem;
+  margin-bottom: 11rem;
+}
+#C2{
+  margin-top: -11rem;
+  margin-bottom: 11rem;
+}
+#C3{
+  margin-top: -12.5rem;
+  margin-bottom: 12.5rem;
+}
+#L{
+  margin-top: -12.5rem;
+  margin-bottom: 12.5rem;
 }
 
 @media(max-width:991px){

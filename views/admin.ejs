@@ -17,6 +17,10 @@
                     <li><a href="#N">Nosotros</a></li>
                     <li><a href="#M">Psicopedagógico</a></li>
                     <li><a href="#I">Personal</a></li>
+                    <li><a href="#C1">Concurso</a></li>
+                    <li><a href="#C2">Contemplaciones</a></li>
+                    <li><a href="#C3">Consideraciones</a></li>
+                    <li><a href="#L">Links</a></li>
                 </ul>
         </div>
     </header>
@@ -62,7 +66,7 @@
     </section>
 
     
-    <main class="mision">
+    <main class="Kati">
         <div id="M"></div>
         <div class="txt">
           <h1>Parte Rosa Contactos:</h1>
@@ -429,6 +433,7 @@
         </section>
 
         <section class="concurso">
+          <div id="C1"></div>
           <div class="concurso-content container">
             <h1>Parte Concurso de Becas:</h1>
 
@@ -482,6 +487,7 @@
         </section >
 
         <section class="contempla">
+          <div id="C2"></div>
           <div class="contempla-content container">
             <h1>Parte Contempla los Subpasos:</h1>
             <div class="container">
@@ -578,7 +584,7 @@
         </section >
 
         <section class="considera">
-          <div id="I"></div>
+          <div id="C3"></div>
           <div class="considera-content container">
             <h1>Parte Considera al Momento:</h1>
           </div>
@@ -838,21 +844,42 @@
              <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
            </span>
                        </form>
-          </div>
-
-        </section>
-
-
-        <section>
-
-          <div>
-
+                       <form class="ftxt" onsubmit="return actualizar(this, event)">
+                           <input type="hidden" name="clave" value="C_t29">
+                           <textarea name="valor" oninput="ajustarAltura(this)"><%= contenido.C_t29 %></textarea>
+                           <button class="UD" type="submit">Actualizar</button>
+                           <span class="mensaje">
+             <span class="texto-mensaje"></span>
+             <button type="button" class="cerrar-mensaje" onclick="cerrarMensaje(this)">×</button>
+           </span>
+                       </form>
+          <div style="margin-top: 7rem;"></div>
+                        <form class="fi" onsubmit="subirImagen(this, event)" enctype="multipart/form-data">
+      <input type="hidden" name="clave" value="C_i15">
+    
+      <div class="preview-container">
+        <img src="<%= contenido.C_i15 %>?v=2" alt="Imagen actual" class="preview-img" id="preview-C_i15">
+      </div>
+    
+      <div class="input-container">
+    <input type="file" name="imagen" id="BI16" accept="image/*" onchange="mostrarPreview(this, 'preview-C_i15'); habilitarBoton(this); actualizarTextoArchivo(this)">
+    <label for="BI16">Seleccionar Imagen</label>
+    <span id="nombre-archivo" class="archivo-texto">No hay archivo nuevo</span>
+    <button type="submit" class="UDI" disabled>Actualizar imagen</button>
+</div>
+    
+      <span class="mensaje" style="display:none">
+        <span class="texto-mensaje"></span>
+        <button type="button" class="cerrar-mensaje" onclick="this.parentElement.style.display='none'">✖</button>
+      </span>
+    </form>
           </div>
 
         </section>
 
         <!-- Esta parte es para el link-->
         <section class="link">
+          <div id="L"></div>
           <div class="link-content container">
             <h1>Link para el formulario:</h1>
 

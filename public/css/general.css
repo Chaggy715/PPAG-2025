@@ -140,11 +140,11 @@ button{
   /* para el fondo del boton */
   color: var(--blanco);
   /* color del texto */
-  padding: 1rem 3rem;
-  /* contorno */
+  padding: 1.5rem 3rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   /* que tan grande esta el contorno */
-  font-size: 15px;
+  font-size: 2.5rem;
   /* tamaño de la fuente */
   text-decoration: none;
   /* quitar la linea */
@@ -153,8 +153,6 @@ button{
   font-weight: bold;
   /* tipo de fuente */
   border-radius: 10rem;
-  /* para el contorno del boton*/
-  width: 15%;
   /* para que el boton en telefonos moviles sea mas grande */
   text-align: center;
   /* alinear el texto en el medio */
@@ -167,15 +165,13 @@ h2{
   font-family: 'Oswald';
 
 }
-.imagen3{
-  background-image: url(../images/tabla-1.webp);
-  background-position: center;
-background-size: 70%;
-min-height: 100vh;
-background-repeat: no-repeat;
-
+.imagen3 img{
+  width: 90%;
 }
 .imagen3{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
  background-color: #d9d9d9;
 }
 h2{
@@ -416,7 +412,13 @@ background-repeat: no-repeat;
   font-size: 2.5rem;
 }
 .alexa{
+  text-align: center;
   font-size: 40px;
+  width: 80%;
+}
+#A{
+  margin-top: -8rem;
+  margin-bottom: 8rem;
 }
 
 /*los siguientes de lista son para no usar br en html y lo puedan editar facilmente*/
