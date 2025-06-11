@@ -15,7 +15,7 @@ body {
 h1{
   text-align: center;
   text-transform: uppercase;        
-  color: burlywood;
+  color: #ba0031;
   font-size: 13rem;
   margin-bottom: -1rem;
 }
@@ -27,7 +27,7 @@ h2{
   margin: 0 auto;
 }
 .header{
-  background-color: rgb(209, 209, 209);
+  background-color: #013a89;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -91,7 +91,7 @@ li:hover {
 }
 .nosotros {
   padding: 4.5rem 5rem 5rem 5rem;
-  background-color: #2aaa89;
+  background-color: burlywood;
   position: relative;
 }
 .nosotros-content {
@@ -108,107 +108,6 @@ li:hover {
   color: #414247;
   margin-bottom: 4rem;
   line-height: 4rem;
-}
-.pn{
-  font-weight: bold;
-  font-size: 2rem;
-  color: #323337;
-  line-height: 2.5rem;
-}
-#I{
-  margin-top: -12.5rem;
-  margin-bottom: 12.5rem;
-}
-.integrantes{
-  padding: 4.5rem 6rem 2rem 6rem;
-  background-color: #8f8f8f;
-  position: relative;
-  text-align: center;
-}
-.integrantes h2{
-  margin-bottom: 4rem;
-  width: 100%;
-}
-.integrantes-content{
-  width: 1600px;
-  display: flex;
-}
-.info-1{
-  width: 50%;
-  padding: 2rem 5rem;
-}
-.integrantes-content h3{
-  padding: 1rem;
-  font-size: 4rem;
-}
-.integrantes-content h4{
-  padding-bottom: 1rem;
-  font-size: 3rem;
-}
-.integrantes-content p{
-  padding: 1rem;
-  font-size: 2.5rem;
-  line-height: 3.5rem;
-}
-
-/*los siguientes de lista son para no usar br en html y lo puedan editar facilmente*/
-.lista {
-  white-space: pre-wrap;
-}
-.lista::before {
-  content: "";
-}
-.lista {
-  display: block;
-}
-.lista span {
-  display: block;
-  margin-bottom: 8px;
-}
-
-#M{
-  margin-top: -12.5rem;
-  margin-bottom: 12.5rem;
-}
-.mision{
-  padding: 4.5rem 6rem 4rem 6rem;
-  background-color: #c6204b;
-  position: relative;
-  text-align: center;
-}
-.txt{
-  margin: auto;
-  width: 130rem;
-}
-.txt h2{
-  margin-bottom: 3rem;
-}
-.txt p{
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-.mision-content{
-  width: 160rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.info{
-  text-align: center;
-  width: 31%;
-  margin-top: 4rem;
-}
-.info img{
-  width: 30rem;
-  border-radius: 25px;
-}
-.info h3{
-  font-size: 4rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.info p{
-  font-size: 2.5rem;
 }
 
 @media(max-width:991px){
@@ -262,70 +161,5 @@ li:hover {
   .nosotros-content h3{
     font-size: 2.3rem;
     line-height: 2.5rem;
-  }
-
-  .integrantes-content{
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: -1rem;
-  }
-
-  .integrantes-content img{
-    width: 100%;
-  }
-
-  .integrantes-content h3{
-    font-size: 3rem;
-  }
-
-  .integrantes-content h4{
-    font-size: 2rem;
-  }
-
-  .integrantes-content p{
-    font-size: 1.8rem;
-    line-height: 2rem;
-  }
-
-  .info-1{
-    width: 100%;
-    padding: 0;
-    margin-bottom: 3.5rem;
-  }
-
-  .txt{
-    width: 100%;
-    margin-bottom: -5rem;
-  }
-
-  .txt p{
-    font-size: 2rem;
-  }
-
-  .mision-content{
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 4rem;
-  }
-
-  .info{
-    width: 100%;
-
-  }
-
-  .info img{
-    width: 100%;
-    margin-bottom: -3rem;
-  }
-
-  .info h3{
-    font-size: 2.5rem;
-  }
-
-  .info p{
-    font-size: 2rem;
-    margin-bottom: -2rem;
   }
 }

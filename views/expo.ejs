@@ -15,9 +15,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="#H">Inicio</a></li>
-                    <li><a href="#N">Nosotros</a></li>
-                    <li><a href="#M">Psicopedagógico</a></li>
-                    <li><a href="#I">Personal</a></li>
+                    <li><a href="#P">Pdf</a></li>
                     <li><a href="/g">BECAS-2025</a></li>
                     <li><a href="/c">CONTACTOS</a></li>
                 </ul>
@@ -28,7 +26,7 @@
     </header>
 
     <section class="nosotros">
-        <div id="N"></div>
+        <div id="P"></div>
         <div class="nosotros-content container">
             <h2>Horarios Actividades</h2>
             <h3 class="h3n">
@@ -37,72 +35,11 @@
                 que vamos a tener en el transcurso de la semana, guardalo bien
                 para que sepas en qué salón estar a la hora exacta.
             </h3>
-            <p class="pn lista"><%= contenido.C_p2 %></p>
+            <div class="container">
+                <button><a href="#H">Itinerario</a></button>
+            </div>
         </div>
     </section>
-
-    
-    <main class="mision">
-        <div id="M"></div>
-        <div class="txt">
-            <h2><%= contenido.C_t2 %></h2>
-            <p><%= contenido.C_p3 %></p>
-            </div>
-        <div class="mision-content container">
-            <div class="info">
-                <img src="<%= contenido.C_i1 %>?v=1" alt="Imágen">
-                <h3><%= contenido.C_t3 %></h3>
-                <p><%= contenido.C_p4 %></p>
-            </div>
-
-            <div class="info">
-                <img src="<%= contenido.C_i2 %>?v=1" alt="Imágen">
-                <h3><%= contenido.C_t4 %></h3>
-                <p><%= contenido.C_p5 %></p>
-                </div>
-
-                <div class="info">
-                    <img src="<%= contenido.C_i3 %>?v=1" alt="Imágen">
-                <h3><%= contenido.C_t5 %></h3>
-                <p><%= contenido.C_p6 %></p>
-                </div>
-
-                <div class="info">
-                    <img src="<%= contenido.C_i4 %>?v=1" alt="Imágen">
-                    <h3><%= contenido.C_t6 %></h3>
-                    <p><%= contenido.C_p7 %></p>
-                    </div>
-
-                    <div class="info">
-                        <img src="<%= contenido.C_i5 %>?v=1" alt="Imágen">
-                        <h3><%= contenido.C_t7 %></h3>
-                        <p><%= contenido.C_p8 %></p>
-                        </div>
-
-                        <div class="info">
-                <img src="<%= contenido.C_i6 %>?v=1" alt="Imágen">
-                <h3><%= contenido.C_t8 %></h3>
-                <p><%= contenido.C_p9 %></p>
-                </div>
-                
-            </div>
-        </main>
-        <section class="integrantes">
-            <div id="I"></div>
-            <h2><%= contenido.C_t9 %></h2>
-            <div class="integrantes-content container">
-                <div class="ale info-1">
-                    <h3><%= contenido.C_t10 %></h3>
-                    <h4><%= contenido.C_t11 %></h4>
-                    <p class="lista"><%= contenido.C_p10 %></p>
-                </div>
-                <div class="karla info-1">
-                    <h3><%= contenido.C_t12 %></h3>
-                    <h4><%= contenido.C_t13 %></h4>
-                    <p class="lista"><%= contenido.C_p11 %></p>
-                </div>
-            </div>
-        </section>
         <%- include('partials/footer') %>
     </body>
     </html>
